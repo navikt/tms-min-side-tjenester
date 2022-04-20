@@ -1,20 +1,26 @@
-import { useState } from "react";
+import React from "react";
 import { useQuery } from "react-query";
-import { apiUrl } from "./api/urls";
+import { oppfolgingUrl } from "./api/urls";
 import { fetcher } from "./api/api";
-import Komponent from "./components/Komponent";
+import { Ingress } from "@navikt/ds-react";
+import { generelleLenker, oppfolgingsLenker } from "./lenker";
+import Lenkeliste from "./components/Lenkeliste";
 import "@navikt/ds-css";
 import "./App.css";
 
 function App() {
-  const { data } = useQuery(apiUrl, fetcher);
+  const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
+  const lenker = data?.erUnderOppfolging ? oppfolgingsLenker : generelleLenker;
+
+  if (isLoading) {
+    return null;
+  }
 
   return (
-    <main className="main">
-      <div className="app">
-        <Komponent tekst={data?.tekst} />
-      </div>
-    </main>
+    <div className="app">
+      <Ingress className="flere-tjenester-header">Flere tjenester</Ingress>
+      <Lenkeliste lenker={lenker} />
+    </div>
   );
 }
 

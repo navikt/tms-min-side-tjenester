@@ -1,12 +1,22 @@
-.main {
-  height: auto;
-  min-height: 100%;
-}
-
-.app {
-  flex-direction: column;
+.flere-tjenester-header {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.flere-tjenester-header::before {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: lightgray;
+}
+
+.flere-tjenester-header::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: lightgray;
 }

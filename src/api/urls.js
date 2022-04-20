@@ -1,13 +1,134 @@
-function getEnvironment() {
-  if (process.env.NODE_ENV === "production") {
+const isProduction = window.location.href.includes("www.nav.no");
+const isDevelopment = window.location.href.includes("www.dev.nav.no");
+
+export const getEnvironment = () => {
+  if (isProduction) {
     return "production";
   }
-  return "development";
-}
 
-const API_URL = {
-  development: "http://localhost:3000/api/endpoint",
-  production: "https://person.nav.no/api/endpoint",
+  if (isDevelopment) {
+    return "development";
+  }
+
+  return "local";
 };
 
-export const apiUrl = API_URL[getEnvironment()];
+const OPPFOLGING_URL = {
+  local: "http://localhost:3000/api/oppfolging",
+  development: "http://localhost:3000/api/oppfolging",
+  production: "https://person.nav.no/api/oppfolging",
+};
+
+const STILLINGER_URL = {
+  local: "http://localhost:3000/stillinger",
+  development: "https://arbeidsplassen.nav.no/stillinger",
+  production: "https://arbeidsplassen.nav.no/stillinger",
+};
+
+const UFORETRYGD_URL = {
+  local: "http://localhost:3000/uforetrygd",
+  development: `https://tjenester-q1.nav.no/pselv/publisering/uforetrygd.jsf?context=ut`,
+  production: `https://tjenester.nav.no/pselv/publisering/uforetrygd.jsf?context=ut`,
+};
+
+const FORELDREPENGER_URL = {
+  local: "http://localhost:3000/forelrepenger",
+  development: "https://foreldrepenger.nav.no",
+  production: "https://foreldrepenger.nav.no",
+};
+
+const AKTIVITETSPLAN_URL = {
+  local: "http://localhost:3000/aktivitetsplan",
+  development: "https://aktivitetsplan-q.nav.no",
+  production: "https://aktivitetsplan.nav.no",
+};
+
+const MELDEKORT_URL = {
+  local: "http://localhost:3000/meldekort",
+  development: "https://www.dev.nav.no/meldekort/om-meldekort",
+  production: "https://www.nav.no/meldekort/om-meldekort",
+};
+
+const PERSONOPPLYSNINGER_URL = {
+  local: "http://localhost:3000/personopplysninger",
+  development: "https://www.dev.nav/person/personopplysninger",
+  production: "https://www.nav/person/personopplysninger",
+};
+
+const SJEMAER_URL = {
+  local: "http://localhost:3000/soknader",
+  development: "https://www.dev.nav.no/soknader",
+  production: "https://www.nav.no/soknader",
+};
+
+const PENSJON_URL = {
+  local: "http://localhost:3000/pensjon",
+  development: "https://tjenester-q1.nav.no/pselv/publisering/dinpensjon.jsf",
+  production: "https://tjenester.nav.no/pselv/publisering/dinpensjon.jsf",
+};
+
+const STILLINGSOK_URL = {
+  local: "http://localhost:3000/stillingsok",
+  development: "https://stillingsok.nav.no/pam-stillingsok/lagrede-sok",
+  production: "https://stillingsok.nav.no/pam-stillingsok/lagrede-sok",
+};
+
+const ARBEIDSSOKER_URL = {
+  local: "http://localhost:3000/arbeid",
+  development: "https://www.dev.nav.no/arbeid",
+  production: "https://www.nav.no/arbeid",
+};
+
+const ARBEIDSSOKER_REGISTRERING_URL = {
+  local: "http://localhost:3000/arbeidssokerregistrering",
+  development: "https://arbeidssokerregistrering-q.nav.no",
+  production: "https://arbeidssokerregistrering.nav.no",
+};
+
+const SOSIALHJELP_URL = {
+  local: "http://localhost:3000/sosialhjelp",
+  development: "https://www.dev.nav.no/sosialhjelp/innsyn",
+  production: "https://www.nav.no/sosialhjelp/innsyn",
+};
+
+const FULLMAKTER_URL = {
+  local: "http://localhost:3000/fullmakter",
+  development: "https://www.dev.nav.no/person/pdl-fullmakt-ui",
+  production: "https://www.nav.no/person/pdl-fullmakt-ui",
+};
+
+const PLEIEPENGER_URL = {
+  local: "http://localhost:3000/pleiepenger",
+  development: "https://sif-innsyn.dev.nav.no/familie/sykdom-i-familien/soknad/innsyn",
+  production: "https://www.nav.no/familie/sykdom-i-familien/soknad/innsyn",
+};
+
+const SYKEFRAVAER_URL = {
+  local: "http://localhost:3000/sykefravaer",
+  development: "https://www-gcp.dev.nav.no/syk/sykefravaer",
+  production: "https://www.nav.no/syk/sykefravaer",
+};
+
+const HJELPEMIDLER_URL = {
+  local: "http://localhost:3000/oppfolging",
+  development: "https://hjelpemidler.dev.nav.no/hjelpemidler/dinehjelpemidler",
+  production: "https://www.nav.no/hjelpemidler/dinehjelpemidler",
+};
+
+export const oppfolgingUrl = OPPFOLGING_URL[getEnvironment()];
+export const stillingerUrl = STILLINGER_URL[getEnvironment()];
+export const uforetrygdUrl = UFORETRYGD_URL[getEnvironment()];
+export const foreldrepengerUrl = FORELDREPENGER_URL[getEnvironment()];
+export const aktivitetsplanUrl = AKTIVITETSPLAN_URL[getEnvironment()];
+export const meldekortUrl = MELDEKORT_URL[getEnvironment()];
+export const personopplysningerUrl = PERSONOPPLYSNINGER_URL[getEnvironment()];
+export const skjemaerUrl = SJEMAER_URL[getEnvironment()];
+export const pensjonUrl = PENSJON_URL[getEnvironment()];
+export const stillingsokUrl = STILLINGSOK_URL[getEnvironment()];
+export const arbeidssokerUrl = ARBEIDSSOKER_URL[getEnvironment()];
+export const arbeidssokerRegistreringUrl = ARBEIDSSOKER_REGISTRERING_URL[getEnvironment()];
+export const sosialhjelpUrl = SOSIALHJELP_URL[getEnvironment()];
+export const fullmakterUrl = FULLMAKTER_URL[getEnvironment()];
+export const pleiepengerUrl = PLEIEPENGER_URL[getEnvironment()];
+export const sykefravaerUrl = SYKEFRAVAER_URL[getEnvironment()];
+export const hjelpemidlerUrl = HJELPEMIDLER_URL[getEnvironment()];
