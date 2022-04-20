@@ -26,6 +26,7 @@ export default ({ command }) => ({
   ],
   build: {
     cssCodeSplit: false,
+    minify: false,
     rollupOptions: {
       input: "src/Mikrofrontend.jsx",
       output: {
