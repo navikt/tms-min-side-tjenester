@@ -27,7 +27,7 @@ export default ({ command }) => ({
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/App.jsx"),
+      entry: resolve(__dirname, "src/Mikrofrontend.jsx"),
       name: "tms-min-side-tjenester",
       formats: ["es"],
       fileName: () => `bundle.js`,
