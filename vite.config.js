@@ -32,8 +32,6 @@ export default ({ command }) => ({
       formats: ["es"],
       fileName: () => `bundle.js`,
     },
-    cssCodeSplit: false,
-    minify: true,
   },
   test: {
     global: true,
