@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { viteMockServe } from "vite-plugin-mock";
 import { rollupImportMapPlugin } from "rollup-plugin-import-map";
+import { resolve } from "path";
 
 const reactUrl = "https://min-side-assets.dev.intern.nav.no/react/17/esm/index.js";
 const reactDomUrl = "https://min-side-assets.dev.intern.nav.no/react-dom/17/esm/index.js";
@@ -25,17 +26,14 @@ export default ({ command }) => ({
     },
   ],
   build: {
-    cssCodeSplit: false,
-    minify: false,
-    rollupOptions: {
-      input: "src/Mikrofrontend.jsx",
-      output: {
-        manualChunks: false,
-        entryFileNames: `bundle.js`,
-        chunkFileNames: `bundle.js`,
-        assetFileNames: `bundle.[ext]`,
-      },
+    lib: {
+      entry: resolve(__dirname, "src/App.jsx"),
+      name: "tms-min-side-tjenester",
+      formats: ["es"],
+      fileName: () => `bundle.js`,
     },
+    cssCodeSplit: false,
+    minify: true,
   },
   test: {
     global: true,
