@@ -21,7 +21,7 @@ Kan brukes som utgangspunkt for å opprette nye mikrofrontends i Min Side.
 
 1. Bygg tms-min-side-tjenester ved å kjøre npm run build
 2. Start appen lokalt ved å kjøre npm run dev
-3. Appen nås på http://localhost:3000/minside
+3. Appen nås på http://localhost:3000
 
 # Henvendelser
 
