@@ -1,13 +1,17 @@
 .flere-tjenester-nav {
   display: flex;
   flex-wrap: wrap;
-  margin: 1.5rem;
   text-align: center;
+  margin: 1.5rem;
 }
 
 .flere-tjenster-link {
   min-width: 33.33%;
   margin-bottom: 1.5rem;
+}
+
+.flere-tjenster-link:not(:first-child):not(:nth-child(2)) {
+  flex-grow:0;
 }
 
 @media (max-width: 648px) {
