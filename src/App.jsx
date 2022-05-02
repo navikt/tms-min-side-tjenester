@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="flere-tjenester">
       <Ingress className="flere-tjenester-header">Flere tjenester</Ingress>
       <Lenkeliste lenker={lenker} />
     </div>
