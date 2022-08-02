@@ -2,7 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import { oppfolgingUrl } from "./api/urls";
 import { fetcher } from "./api/api";
-import { Ingress } from "@navikt/ds-react";
+import { Ingress, Panel } from "@navikt/ds-react";
 import { generelleLenker, oppfolgingsLenker } from "./lenker";
 import Lenkeliste from "./components/Lenkeliste";
 import "@navikt/ds-css";
@@ -18,8 +18,10 @@ function App() {
 
   return (
     <div className="flere-tjenester">
-      <Ingress className="flere-tjenester-header">Flere tjenester</Ingress>
-      <Lenkeliste lenker={lenker} />
+      <Panel>
+        <Ingress className="flere-tjenester-header">Flere tjenester</Ingress>
+        <Lenkeliste lenker={lenker} />
+      </Panel>
     </div>
   );
 }
