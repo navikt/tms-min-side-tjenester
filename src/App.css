@@ -1,3 +1,10 @@
+.page-wrapper-microfrontend {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #272727;
+}
+
 .flere-tjenester-header {
   display: flex;
   flex-direction: row;
