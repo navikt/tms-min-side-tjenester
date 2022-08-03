@@ -7,3 +7,30 @@
   text-align: left;
   padding-left: 1.5rem;
 }
+
+.lenkepanel-liten-wrapper {
+  display: flex;
+}
+
+.lenkepanel-stor-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.navds-link-panel__chevron {
+  width: 18px;
+  height: 18px;
+}
+
+
+@media (min-width: 0px) {
+  .lenkepanel-liten-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 648px) {
+  .lenkepanel-liten-wrapper {
+    flex-direction: row;
+  }
+}

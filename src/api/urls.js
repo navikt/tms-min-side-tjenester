@@ -115,6 +115,30 @@ const HJELPEMIDLER_URL = {
   production: "https://www.nav.no/hjelpemidler/dinehjelpemidler",
 };
 
+const NAV_URL = {
+  local: "http://localhost:3000",
+  development: "https://www.dev.nav.no",
+  production: "https://www.nav.no",
+};
+
+const PERSON_NAV_URL = {
+  local: "http://localhost:3000",
+  development: "https://person.dev.nav.no",
+  production: "https://person.nav.no",
+};
+
+const DITTNAV_API_URL = {
+  local: "http://localhost:3000/dittnav-api",
+  development: "https://person.dev.nav.no/dittnav-api",
+  production: "https://person.nav.no/dittnav-api",
+};
+
+const TJENESTER_URL = {
+  local: "http://localhost:3000/tjenester",
+  development: "https://tjenester.dev.nav.no",
+  production: "https://tjenester.nav.no",
+};
+
 export const oppfolgingUrl = OPPFOLGING_URL[getEnvironment()];
 export const stillingerUrl = STILLINGER_URL[getEnvironment()];
 export const uforetrygdUrl = UFORETRYGD_URL[getEnvironment()];
@@ -132,3 +156,16 @@ export const fullmakterUrl = FULLMAKTER_URL[getEnvironment()];
 export const pleiepengerUrl = PLEIEPENGER_URL[getEnvironment()];
 export const sykefravaerUrl = SYKEFRAVAER_URL[getEnvironment()];
 export const hjelpemidlerUrl = HJELPEMIDLER_URL[getEnvironment()];
+export const navUrl = NAV_URL[getEnvironment()];
+export const personNavUrl = PERSON_NAV_URL[getEnvironment()];
+export const dittNavApiUrl = DITTNAV_API_URL[getEnvironment()];
+export const tjenesterUrl = TJENESTER_URL[getEnvironment()];
+
+export const utbetalingsoversiktUrl = `${navUrl}/utbetalingsoversikt`;
+export const innboksUrl = "https://uat-navdialog.cs108.force.com/Innboks/s/";
+export const dialogMedVeilederUrl = `${navUrl}/person/dittnav/veientilarbeid/dialog`;
+export const mineSakerUrl = `${personNavUrl}/mine-saker`;
+export const sakerApiUrl = `${dittNavApiUrl}/saker`;
+export const arbeidUrl = `${navUrl}/arbeid`;
+export const soknadUrl = `${navUrl}/soknader`;
+export const dinPensjonUrl = `${tjenesterUrl}/pselv/publisering/dinpensjon.jsf`;
