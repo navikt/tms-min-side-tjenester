@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-      <section>
+      <section className="page-wrapper-microfrontend">
         <section className="min-side-lenkepanel">
           <section className={brukerUnderOppfolging ? "lenkepanel-stor-wrapper" : "lenkepanel-liten-wrapper"}>
             <Utbetaling />
