@@ -1,4 +1,5 @@
 import {
+  arbeidsavklaringspengerUrl,
   aktivitetsplanUrl,
   arbeidssokerRegistreringUrl,
   arbeidssokerUrl,
@@ -82,6 +83,10 @@ export const lenker = {
     tittel: "Hjelpemidler",
     url: hjelpemidlerUrl,
   },
+  arbeidsavklaringspenger: {
+    tittel: "Arbeidsavklaringspenger",
+    url: arbeidsavklaringspengerUrl,
+  },
 };
 
 export const generelleLenker = [
@@ -101,6 +106,7 @@ export const generelleLenker = [
 
 export const oppfolgingsLenker = [
   lenker.sosialhjelp,
+  lenker.arbeidsavklaringspenger,
   lenker.dinPensjon,
   lenker.dineFullmakter,
   lenker.dittSykefravaer,
