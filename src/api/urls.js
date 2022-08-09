@@ -115,6 +115,12 @@ const HJELPEMIDLER_URL = {
   production: "https://www.nav.no/hjelpemidler/dinehjelpemidler",
 };
 
+const ARBEIDSAVKLARINGSPENGER_URL = {
+  local: "http://localhost:3000/aap#kort",
+  development: "https://www.dev.nav.no/aap#kort",
+  production: "https://www.nav.no/aap#kort",
+};
+
 export const oppfolgingUrl = OPPFOLGING_URL[getEnvironment()];
 export const stillingerUrl = STILLINGER_URL[getEnvironment()];
 export const uforetrygdUrl = UFORETRYGD_URL[getEnvironment()];
@@ -132,3 +138,4 @@ export const fullmakterUrl = FULLMAKTER_URL[getEnvironment()];
 export const pleiepengerUrl = PLEIEPENGER_URL[getEnvironment()];
 export const sykefravaerUrl = SYKEFRAVAER_URL[getEnvironment()];
 export const hjelpemidlerUrl = HJELPEMIDLER_URL[getEnvironment()];
+export const arbeidsavklaringspengerUrl = ARBEIDSAVKLARINGSPENGER_URL[getEnvironment()];
