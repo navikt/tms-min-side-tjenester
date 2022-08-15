@@ -10,7 +10,7 @@ const SakstemaElement = ({ href, sakstema, sistEndret }) => {
   const { formatDateAndTime } = i18n[translate.locale];
 
   return (
-    <div className="sakstema-element" onClick={() => logAmplitudeEvent(sakstema)}>
+    <div className="sakstema-element" onClick={() => logAmplitudeEvent("Siste saker - " + sakstema)}>
       <div className="content-wrapper">
         <div className="sakstema-ikon">
           <FileContent />
