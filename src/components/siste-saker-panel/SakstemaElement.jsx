@@ -1,4 +1,5 @@
 import { useIntl } from "react-intl";
+import { logAmplitudeEvent } from "../../utils/amplitude";
 import { Link, Detail } from "@navikt/ds-react";
 import { Next, FileContent } from "@navikt/ds-icons";
 import i18n from "../../language/i18n";
@@ -9,7 +10,7 @@ const SakstemaElement = ({ href, sakstema, sistEndret }) => {
   const { formatDateAndTime } = i18n[translate.locale];
 
   return (
-    <div className="sakstema-element">
+    <div className="sakstema-element" onClick={() => logAmplitudeEvent(sakstema)}>
       <div className="content-wrapper">
         <div className="sakstema-ikon">
           <FileContent />

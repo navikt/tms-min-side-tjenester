@@ -2,6 +2,7 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { LinkPanel, Panel, Heading } from "@navikt/ds-react";
 import { dialogMedVeilederUrl, innboksUrl, mineSakerUrl } from "../../api/urls";
+import { logAmplitudeEvent } from "../../utils/amplitude";
 import KommunikasjonsElement from "./KommunikasjonsElement";
 import { DialogDots, Email } from "@navikt/ds-icons";
 import "./KommunikasjonsFlis.css";
@@ -29,16 +30,18 @@ const KommunikasjonsFlis = ({ size }) => {
           />
         </Panel>
       ) : (
-        <LinkPanel href={mineSakerUrl} border={false} className="kommunikasjonsflis-liten">
-          <div className="content-wrapper">
-            <div className="kommunikasjons-ikon-wrapper">
-              <Email />
+        <section onClick={() => logAmplitudeEvent("Innboks liten")}>
+          <LinkPanel href={mineSakerUrl} border={false} className="kommunikasjonsflis-liten">
+            <div className="content-wrapper">
+              <div className="kommunikasjons-ikon-wrapper">
+                <Email />
+              </div>
+              <LinkPanel.Title className="kommunikasjonsflis-liten-tittel">
+                {translate.formatMessage({ id: "lenkepanel.hoyre.lenketekst.innboks" })}
+              </LinkPanel.Title>
             </div>
-            <LinkPanel.Title className="kommunikasjonsflis-liten-tittel">
-              {translate.formatMessage({ id: "lenkepanel.hoyre.lenketekst.innboks" })}
-            </LinkPanel.Title>
-          </div>
-        </LinkPanel>
+          </LinkPanel>
+        </section>
       )}
     </>
   );

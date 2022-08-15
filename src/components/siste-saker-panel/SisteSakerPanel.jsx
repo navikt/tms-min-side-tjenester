@@ -4,6 +4,7 @@ import { useIntl } from "react-intl";
 import { fetcher } from "../../api/api";
 import { LinkPanel, Panel, Heading } from "@navikt/ds-react";
 import { mineSakerUrl, sakerApiUrl } from "../../api/urls";
+import { logAmplitudeEvent } from "../../utils/amplitude";
 import SakstemaElement from "./SakstemaElement";
 import "./SisteSakerPanel.css";
 import { FileContent } from "@navikt/ds-icons";
@@ -23,7 +24,11 @@ const SisteSakerPanel = () => {
             <Heading spacing level="2" size="small">
               {translate.formatMessage({ id: "lenkepanel.venstre.tittel" })}
             </Heading>
-            <a className="se-alle-saker-inngang" href={mineSakerUrl}>
+            <a
+              className="se-alle-saker-inngang"
+              href={mineSakerUrl}
+              onClick={() => logAmplitudeEvent("Siste saker - Se alle")}
+            >
               Se alle
             </a>
           </div>
@@ -32,7 +37,12 @@ const SisteSakerPanel = () => {
           ))}
         </Panel>
       ) : (
-        <LinkPanel href={mineSakerUrl} border={false} className="siste-saker-panel-liten">
+        <LinkPanel
+          href={mineSakerUrl}
+          border={false}
+          className="siste-saker-panel-liten"
+          onClick={() => logAmplitudeEvent("Siste saker liten")}
+        >
           <div
             style={{
               display: "grid",
