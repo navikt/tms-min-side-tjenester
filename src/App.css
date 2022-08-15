@@ -2,7 +2,16 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  color: #272727;
+  color: #262626;
+}
+
+svg {
+  height: 22px !important;
+  width: 22px !important;
+}
+
+.navds-panel {
+  padding: 24px !important;
 }
 
 .flere-tjenester-header {
@@ -10,13 +19,16 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem !important;
   text-align: left;
-  padding-left: 1.5rem;
+  font-weight: bold !important;
 }
 
 .lenkepanel-liten-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
 }
 
 .lenkepanel-stor-wrapper {

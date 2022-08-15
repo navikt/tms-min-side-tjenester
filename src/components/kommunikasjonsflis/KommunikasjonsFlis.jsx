@@ -13,7 +13,7 @@ const KommunikasjonsFlis = ({ size }) => {
     <>
       {size === "large" ? (
         <Panel className="kommunikasjonsflis-stor">
-          <Heading spacing level="2" size="small">
+          <Heading spacing level="2" size="medium">
             {translate.formatMessage({ id: "lenkepanel.hoyre.tittel" })}
           </Heading>
           <KommunikasjonsElement

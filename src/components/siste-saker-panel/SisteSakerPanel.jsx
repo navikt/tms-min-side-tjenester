@@ -21,7 +21,7 @@ const SisteSakerPanel = () => {
       {visStortSakspanel ? (
         <Panel className="siste-saker-panel">
           <div className="siste-saker-panel-heading">
-            <Heading spacing level="2" size="small">
+            <Heading spacing level="2" size="medium">
               {translate.formatMessage({ id: "lenkepanel.venstre.tittel" })}
             </Heading>
             <a
