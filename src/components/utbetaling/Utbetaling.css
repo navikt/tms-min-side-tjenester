@@ -26,4 +26,8 @@
     .utbetalings-flis {
         margin: 0;
     }
+
+    .utbetalings-flis-stor {
+        width: 24.5rem;
+    }
 }

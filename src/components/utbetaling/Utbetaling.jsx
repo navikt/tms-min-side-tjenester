@@ -6,13 +6,13 @@ import { Money } from "@navikt/ds-icons";
 import "./Utbetaling.css";
 import { logAmplitudeEvent } from "../../utils/amplitude";
 
-const Utbetaling = () => {
+const Utbetaling = ({ className }) => {
   const translate = useIntl();
 
   return (
     <>
       <LinkPanel
-        className="utbetalings-flis"
+        className={className}
         href={utbetalingsoversiktUrl}
         border={false}
         onClick={() => logAmplitudeEvent("Dine utbetalinger")}

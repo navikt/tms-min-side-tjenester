@@ -14,7 +14,7 @@ import "./App.css";
 
 function App() {
   const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
-  const brukerUnderOppfolging = data?.erBrukerUnderOppfolging;
+  const brukerUnderOppfolging = true;
   const lenker = brukerUnderOppfolging ? oppfolgingsLenker : generelleLenker;
 
   if (isLoading) {
@@ -26,11 +26,12 @@ function App() {
       <section className="page-wrapper-microfrontend">
         <section className="min-side-lenkepanel">
           <section className={brukerUnderOppfolging ? "lenkepanel-stor-wrapper" : "lenkepanel-liten-wrapper"}>
-            <Utbetaling />
+            <Utbetaling className={brukerUnderOppfolging ? "utbetalings-flis-stor" : "utbetalings-flis"} />
             <KommunikasjonsFlis size={brukerUnderOppfolging ? "large" : "small"} />
           </section>
           <SisteSakerPanel />
         </section>
+        <GenerelleFliser />
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
       </section>
       <div className="flere-tjenester">
