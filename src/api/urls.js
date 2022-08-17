@@ -139,6 +139,12 @@ const TJENESTER_URL = {
   production: "https://tjenester.nav.no",
 };
 
+const ARBEIDSAVKLARINGSPENGER_URL = {
+  local: "http://localhost:3000/aap#kort",
+  development: "https://www.dev.nav.no/aap#kort",
+  production: "https://www.nav.no/aap#kort",
+};
+
 export const oppfolgingUrl = OPPFOLGING_URL[getEnvironment()];
 export const stillingerUrl = STILLINGER_URL[getEnvironment()];
 export const uforetrygdUrl = UFORETRYGD_URL[getEnvironment()];
@@ -160,6 +166,7 @@ export const navUrl = NAV_URL[getEnvironment()];
 export const personNavUrl = PERSON_NAV_URL[getEnvironment()];
 export const dittNavApiUrl = DITTNAV_API_URL[getEnvironment()];
 export const tjenesterUrl = TJENESTER_URL[getEnvironment()];
+export const arbeidsavklaringspengerUrl = ARBEIDSAVKLARINGSPENGER_URL[getEnvironment()];
 
 export const utbetalingsoversiktUrl = `${navUrl}/utbetalingsoversikt`;
 export const innboksUrl = "https://uat-navdialog.cs108.force.com/Innboks/s/";
