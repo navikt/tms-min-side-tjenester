@@ -14,7 +14,7 @@ import "./App.css";
 
 function App() {
   const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
-  const brukerUnderOppfolging = true;
+  const brukerUnderOppfolging = data?.erBrukerUnderOppfolging;
   const lenker = brukerUnderOppfolging ? oppfolgingsLenker : generelleLenker;
 
   if (isLoading) {
