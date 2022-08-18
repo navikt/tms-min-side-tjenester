@@ -1,0 +1,33 @@
+.utbetalings-ikon {
+    display: flex;
+    align-self: center;
+    overflow: visible;
+    padding: 1rem;
+    margin: 0 1.5rem 0 0;
+    background-color: #CCE2F0;
+    border-radius: 50%;
+}
+
+.content-wrapper {
+    display: flex;
+}
+
+.utbetalings-tekst {
+    font-size: 18px !important;
+}
+
+@media (min-width: 0px) {
+    .utbetalings-flis {
+        margin: 0 0.5rem 0 0.5rem;
+    }
+}
+
+@media (min-width: 648px) {
+    .utbetalings-flis {
+        margin: 0;
+    }
+
+    .utbetalings-flis-stor {
+        width: 24.5rem;
+    }
+}

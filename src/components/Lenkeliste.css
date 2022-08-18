@@ -2,12 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   text-align: left;
-  margin: 1.5rem;
 }
 
 .flere-tjenster-link {
   min-width: 33.33%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .flere-tjenster-link:not(:first-child):not(:nth-child(2)) {
