@@ -31,7 +31,6 @@ function App() {
           </section>
           <SisteSakerPanel />
         </section>
-        <GenerelleFliser />
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
       </section>
       <div className="flere-tjenester">
