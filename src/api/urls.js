@@ -139,6 +139,12 @@ const TJENESTER_URL = {
   production: "https://tjenester.nav.no",
 };
 
+const INNBOKS_URL = {
+  local: "http://localhost:3000/innboks",
+  development: "https://innboks.dev.nav.no",
+  production: "https://innboks.nav.no",
+};
+
 const ARBEIDSAVKLARINGSPENGER_URL = {
   local: "http://localhost:3000/aap#kort",
   development: "https://www.dev.nav.no/aap#kort",
@@ -166,10 +172,10 @@ export const navUrl = NAV_URL[getEnvironment()];
 export const personNavUrl = PERSON_NAV_URL[getEnvironment()];
 export const dittNavApiUrl = DITTNAV_API_URL[getEnvironment()];
 export const tjenesterUrl = TJENESTER_URL[getEnvironment()];
+export const innboksUrl = INNBOKS_URL[getEnvironment()];
 export const arbeidsavklaringspengerUrl = ARBEIDSAVKLARINGSPENGER_URL[getEnvironment()];
 
-export const utbetalingsoversiktUrl = `${TJENESTER_URL}/utbetalingsoversikt`;
-export const innboksUrl = "https://uat-navdialog.cs108.force.com/Innboks/s/";
+export const utbetalingsoversiktUrl = `${tjenesterUrl}/utbetalingsoversikt`;
 export const dialogMedVeilederUrl = `${navUrl}/person/dittnav/veientilarbeid/dialog`;
 export const mineSakerUrl = `${personNavUrl}/mine-saker`;
 export const sakerApiUrl = `${dittNavApiUrl}/saker`;
