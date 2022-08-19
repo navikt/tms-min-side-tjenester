@@ -10,7 +10,7 @@
     "pretty-quick": "pretty-quick --pattern \"**/*.*(jsx)\""
   },
   "dependencies": {
-    "@navikt/ds-css": "0.12.5",
+    "@navikt/ds-css": "0.18.27",
     "@navikt/ds-react": "0.14.1",
     "amplitude-js": "^8.19.0",
     "dayjs": "^1.11.4",
