@@ -8,6 +8,7 @@ import { logAmplitudeEvent } from "../../utils/amplitude";
 
 const Utbetaling = ({ className }) => {
   const translate = useIntl();
+  console.log(utbetalingsoversiktUrl);
 
   return (
     <>
