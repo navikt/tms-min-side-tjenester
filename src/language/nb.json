@@ -1,0 +1,24 @@
+{ 
+    "utbetalinger.lenketekst": "Dine utbetalinger",
+  
+    "lenkepanel.venstre.tittel": "Dine siste saker",
+    "lenkepanel.venstre.lenketekst.dagpenger": "Dagpenger og oppfølging",
+    "lenkepanel.venstre.lenketekst.arbeidsavklaringspenger": "Arbeidsavklaringspenger og oppfølging",
+    "lenkepanel.venstre.lenketekst.se.saker": "Se alle dine saker",
+    "lenkepanel.venstre.lenkedetail": "Sist oppdatert: ",
+  
+    "lenkepanel.hoyre.tittel": "Kommunikasjon med Nav",
+    "lenkepanel.hoyre.lenketekst.innboks": "Innboks",
+    "lenkepanel.hoyre.ingress.innboks": "Informasjon fra NAV og svar på henvendelser og referater fra samtaler du har på telefon, chat og \"Skriv til oss\".",
+    "lenkepanel.hoyre.lenketekst.dialog": "Dialog med den lokale veilederen din",
+    "lenkepanel.hoyre.ingress.dialog": "For arbeidssøkere og de som mottar AAP. Les meldinger, referater og send melding til veilederen din.",
+    "lenkepanel.hoyre.lenketekst.brevogvedtak": "Brev og vedtak",
+    "lenkepanel.hoyre.ingress.brevogvedtak": "For deg som ikke har Digipost eller e-Boks.",
+  
+    "dine.siste.saker": "Dine siste saker",
+  
+    "generellefliser.sykefravaer-tittel": "Ditt sykefravær",
+    "generellefliser.mistet.jobb-tittel": "Mistet jobben?",
+    "generellefliser.skjemaer-tittel": "Skjemaer",
+    "generellefliser.pensjon-tittel": "Din pensjon"
+  }
