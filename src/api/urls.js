@@ -168,7 +168,7 @@ export const dittNavApiUrl = DITTNAV_API_URL[getEnvironment()];
 export const tjenesterUrl = TJENESTER_URL[getEnvironment()];
 export const arbeidsavklaringspengerUrl = ARBEIDSAVKLARINGSPENGER_URL[getEnvironment()];
 
-export const utbetalingsoversiktUrl = `${navUrl}/utbetalingsoversikt`;
+export const utbetalingsoversiktUrl = `${TJENESTER_URL}/utbetalingsoversikt`;
 export const innboksUrl = "https://uat-navdialog.cs108.force.com/Innboks/s/";
 export const dialogMedVeilederUrl = `${navUrl}/person/dittnav/veientilarbeid/dialog`;
 export const mineSakerUrl = `${personNavUrl}/mine-saker`;
