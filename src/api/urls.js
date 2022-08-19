@@ -51,8 +51,8 @@ const MELDEKORT_URL = {
 
 const PERSONOPPLYSNINGER_URL = {
   local: "http://localhost:3000/personopplysninger",
-  development: "https://www.dev.nav/person/personopplysninger",
-  production: "https://www.nav/person/personopplysninger",
+  development: "https://www.dev.nav.no/person/personopplysninger",
+  production: "https://www.nav.no/person/personopplysninger",
 };
 
 const SJEMAER_URL = {
