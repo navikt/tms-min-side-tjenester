@@ -31,7 +31,7 @@ const KommunikasjonsFlis = ({ size }) => {
         </Panel>
       ) : (
         <section onClick={() => logAmplitudeEvent("Innboks liten")}>
-          <LinkPanel href={mineSakerUrl} border={false} className="kommunikasjonsflis-liten">
+          <LinkPanel href={innboksUrl} border={false} className="kommunikasjonsflis-liten">
             <div className="content-wrapper">
               <div className="kommunikasjons-ikon-wrapper">
                 <Email />
