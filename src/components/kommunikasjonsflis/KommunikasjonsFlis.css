@@ -25,12 +25,12 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin: 1.5rem 0.5rem 0 0.5rem;
+        margin: 1.5rem 0 0 0;
     }
 
     .kommunikasjonsflis-liten {
         width: 100%;
-        margin: 0 0.5rem 0 0.5rem;
+        margin: 0;
     }
 }
 
@@ -42,7 +42,7 @@
     }
 
     .kommunikasjonsflis-liten {
-        margin: 0 0 0 0;
+        margin: 0;
     }
 
     
