@@ -176,7 +176,7 @@ export const innboksUrl = INNBOKS_URL[getEnvironment()];
 export const arbeidsavklaringspengerUrl = ARBEIDSAVKLARINGSPENGER_URL[getEnvironment()];
 
 export const utbetalingsoversiktUrl = `${tjenesterUrl}/utbetalingsoversikt`;
-export const dialogMedVeilederUrl = `${navUrl}/person/dittnav/veientilarbeid/dialog`;
+export const dialogMedVeilederUrl = `${navUrl}/arbeid/dialog`;
 export const mineSakerUrl = `${personNavUrl}/mine-saker`;
 export const sakerApiUrl = `${dittNavApiUrl}/saker`;
 export const arbeidUrl = `${navUrl}/arbeid`;
