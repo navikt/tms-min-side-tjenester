@@ -9,7 +9,7 @@ const KommunikasjonsElement = ({ href, tittel, ingress, ikon }) => {
 
   return (
     <a className={CSS.element} href={href} onClick={() => logAmplitudeEvent(translate.formatMessage({ id: tittel }))}>
-      <div className="content-wrapper">
+      <div className={CSS.content_wrapper}>
         <div className={CSS.ikon}>{ikon}</div>
         <div>
           <Link className={CSS.lenke}>{translate.formatMessage({ id: tittel })}</Link>
