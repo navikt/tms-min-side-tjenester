@@ -1,23 +1,23 @@
-.sakstema-element {
+.element {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1rem 1rem 0;
 }
 
-.content-wrapper {
+.content_wrapper {
     display: flex;
     align-items: center;
 }
 
-.dato-label {
+.dato {
     margin-bottom: 0 !important;
     color: #707070 !important;
     font-weight: 100 !important;
     font-size: 16px !important;
 }
 
-.sakstema-ikon {
+.ikon {
     display: flex;
     align-self: center;
     overflow: visible;
@@ -27,21 +27,21 @@
     border-radius: 50%;
 }
 
-.sakstema-lenke {
+.lenke {
     color: #262626 !important;
     text-decoration: none !important;
     font-weight: bolder;
 }
 
-.sakstema-element:hover {
+.element:hover {
     cursor: pointer;
 }
 
-.sakstema-element:hover > div > div > a{
+.element:hover > div > div > a{
     text-decoration: underline !important;
 }
 
-.sakstema-element:hover > svg.chevron{
+.element:hover > svg.chevron{
     transition-duration: 0.2s;
     transform: translate(3px, 0);
 }

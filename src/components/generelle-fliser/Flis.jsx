@@ -1,7 +1,7 @@
 import { useIntl } from "react-intl";
 import { LinkPanel } from "@navikt/ds-react";
-import "./Flis.css";
 import { logAmplitudeEvent } from "../../utils/amplitude";
+import CSS from "./Flis.module.css";
 
 const Flis = ({ tittel, ikon, href }) => {
   const translate = useIntl();
@@ -9,7 +9,7 @@ const Flis = ({ tittel, ikon, href }) => {
   return (
     <>
       <LinkPanel
-        className="flis-komponent"
+        className={CSS.flis}
         href={href}
         border={false}
         onClick={() => logAmplitudeEvent(translate.formatMessage({ id: tittel }))}
@@ -22,11 +22,9 @@ const Flis = ({ tittel, ikon, href }) => {
             alignItems: "center",
           }}
         >
-          <div className="flis-komponent-ikon">{ikon}</div>
+          <div className={CSS.ikon}>{ikon}</div>
           <div>
-            <LinkPanel.Title className="flis-komponent-tittel">
-              {translate.formatMessage({ id: tittel })}
-            </LinkPanel.Title>
+            <LinkPanel.Title className={CSS.tittel}>{translate.formatMessage({ id: tittel })}</LinkPanel.Title>
           </div>
         </div>
       </LinkPanel>

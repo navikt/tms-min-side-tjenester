@@ -6,8 +6,8 @@ import { LinkPanel, Panel, Heading } from "@navikt/ds-react";
 import { mineSakerUrl, sakerApiUrl } from "../../api/urls";
 import { logAmplitudeEvent } from "../../utils/amplitude";
 import SakstemaElement from "./SakstemaElement";
-import "./SisteSakerPanel.css";
 import { FileContent } from "@navikt/ds-icons";
+import CSS from "./SisteSakerPanel.module.css";
 
 const SisteSakerPanel = () => {
   const { data: saker } = useQuery(sakerApiUrl, fetcher);
@@ -19,13 +19,13 @@ const SisteSakerPanel = () => {
   return (
     <>
       {visStortSakspanel ? (
-        <Panel className="siste-saker-panel">
-          <div className="siste-saker-panel-heading">
+        <Panel className={CSS.panel}>
+          <div className={CSS.heading}>
             <Heading spacing level="2" size="medium">
               {translate.formatMessage({ id: "lenkepanel.venstre.tittel" })}
             </Heading>
             <a
-              className="se-alle-saker-inngang"
+              className={CSS.alle_saker}
               href={mineSakerUrl}
               onClick={() => logAmplitudeEvent("Siste saker - Se alle")}
             >
@@ -40,7 +40,7 @@ const SisteSakerPanel = () => {
         <LinkPanel
           href={mineSakerUrl}
           border={false}
-          className="siste-saker-panel-liten"
+          className={CSS.panel_liten}
           onClick={() => logAmplitudeEvent("Siste saker liten")}
         >
           <div
@@ -51,10 +51,10 @@ const SisteSakerPanel = () => {
               alignItems: "center",
             }}
           >
-            <div className="siste-saker-panel-ikon">
+            <div className={CSS.ikon}>
               <FileContent />
             </div>
-            <LinkPanel.Title className="siste-saker-panel-liten-tittel">
+            <LinkPanel.Title className={CSS.panel_liten_tittel}>
               {translate.formatMessage({ id: "dine.siste.saker" })}
             </LinkPanel.Title>
           </div>

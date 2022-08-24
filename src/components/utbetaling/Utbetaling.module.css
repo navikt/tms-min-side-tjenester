@@ -1,4 +1,4 @@
-.utbetalings-ikon {
+.ikon {
     display: flex;
     align-self: center;
     overflow: visible;
@@ -8,27 +8,28 @@
     border-radius: 50%;
 }
 
-.content-wrapper {
+.content_wrapper {
     display: flex;
+    align-items: center;
 }
 
-.utbetalings-tekst {
+.tekst {
     font-size: 18px !important;
 }
 
 @media (min-width: 0px) {
-    .utbetalings-flis {
+    .flis {
         width: 100%;
         margin: 0;
     }
 }
 
 @media (min-width: 648px) {
-    .utbetalings-flis {
+    .flis {
         margin: 0;
     }
 
-    .utbetalings-flis-stor {
+    .flis_large {
         width: 24.5rem;
     }
 }

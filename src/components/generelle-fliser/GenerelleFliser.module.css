@@ -1,26 +1,25 @@
 @media (min-width: 0px) {
-    .generelle-fliser {
+    .wrapper {
         display: flex;
         flex-direction: column;
-        margin: 0 0 1.5rem 0;
     }
 
-    .generelle-fliser > a {
+    .wrapper > a {
         margin-bottom: 1.5rem;
     }
 
 }
 
 @media (min-width: 648px) {
-    .generelle-fliser {
+    .wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 1.5rem 1.5rem;
-        margin: 0 0 1.5rem 0;
+        margin-bottom: 1.5rem;
     }
 
-    .generelle-fliser > a {
+    .wrapper > a {
         margin-bottom: 0;
     }
 }
