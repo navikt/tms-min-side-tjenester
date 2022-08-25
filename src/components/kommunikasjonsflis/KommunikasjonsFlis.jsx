@@ -5,14 +5,14 @@ import { dialogMedVeilederUrl, innboksUrl, mineSakerUrl } from "../../api/urls";
 import { logAmplitudeEvent } from "../../utils/amplitude";
 import KommunikasjonsElement from "./KommunikasjonsElement";
 import { DialogDots, Email } from "@navikt/ds-icons";
-import "./KommunikasjonsFlis.css";
+import CSS from "./KommunikasjonsFlis.module.css";
 
 const KommunikasjonsFlis = ({ size }) => {
   const translate = useIntl();
   return (
     <>
       {size === "large" ? (
-        <Panel className="kommunikasjonsflis-stor">
+        <Panel className={CSS.large}>
           <Heading spacing level="2" size="medium">
             {translate.formatMessage({ id: "lenkepanel.hoyre.tittel" })}
           </Heading>
@@ -31,12 +31,12 @@ const KommunikasjonsFlis = ({ size }) => {
         </Panel>
       ) : (
         <section onClick={() => logAmplitudeEvent("Innboks liten")}>
-          <LinkPanel href={innboksUrl} border={false} className="kommunikasjonsflis-liten">
-            <div className="content-wrapper">
-              <div className="kommunikasjons-ikon-wrapper">
+          <LinkPanel href={innboksUrl} border={false} className={CSS.small}>
+            <div className={CSS.content_wrapper}>
+              <div className={CSS.ikon_wrapper}>
                 <Email />
               </div>
-              <LinkPanel.Title className="kommunikasjonsflis-liten-tittel">
+              <LinkPanel.Title className={CSS.small_tittel}>
                 {translate.formatMessage({ id: "lenkepanel.hoyre.lenketekst.innboks" })}
               </LinkPanel.Title>
             </div>

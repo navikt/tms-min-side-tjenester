@@ -1,4 +1,4 @@
-.kommunikasjons-element {
+.element {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -7,18 +7,18 @@
     color: #272727;
 }
 
-.kommunikasjons-lenke {
+.lenke {
     color: #272727 !important;
     text-decoration: none !important;
     font-weight: bolder;
 }
 
-.dato-label {
+.dato {
     margin-bottom: 0 !important;
     color: #707070;
 }
 
-.kommunikasjons-ikon-wrapper {
+.ikon {
     display: flex;
     align-self: center;
     overflow: visible;
@@ -28,15 +28,20 @@
     border-radius: 50%;
 }
 
-.kommunikasjons-element:hover {
+.content_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.element:hover {
     cursor: pointer;
 }
 
-.kommunikasjons-element:hover > div > div > a{
+.element:hover > div > div > a{
     text-decoration: underline !important;
 }
 
-.kommunikasjons-element:hover > svg{
+.element:hover > svg{
     transition-duration: 0.2s;
     transform: translate(3px, 0);
 }

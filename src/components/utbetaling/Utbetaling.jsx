@@ -3,25 +3,25 @@ import { useIntl } from "react-intl";
 import { LinkPanel } from "@navikt/ds-react";
 import { utbetalingsoversiktUrl } from "../../api/urls";
 import { Money } from "@navikt/ds-icons";
-import "./Utbetaling.css";
 import { logAmplitudeEvent } from "../../utils/amplitude";
+import CSS from "./Utbetaling.module.css";
 
-const Utbetaling = ({ className }) => {
+const Utbetaling = ({ size }) => {
   const translate = useIntl();
 
   return (
     <>
       <LinkPanel
-        className={className}
+        className={size === "large" ? CSS.flis_large : CSS.flis}
         href={utbetalingsoversiktUrl}
         border={false}
         onClick={() => logAmplitudeEvent("Dine utbetalinger")}
       >
-        <div className="content-wrapper">
-          <div className="utbetalings-ikon">
+        <div className={CSS.content_wrapper}>
+          <div className={CSS.ikon}>
             <Money />
           </div>
-          <LinkPanel.Title className="utbetalings-tekst">
+          <LinkPanel.Title className={CSS.tekst}>
             {translate.formatMessage({ id: "utbetalinger.lenketekst" })}
           </LinkPanel.Title>
         </div>

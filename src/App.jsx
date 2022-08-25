@@ -26,7 +26,7 @@ function App() {
       <section className="page-wrapper-microfrontend">
         <section className="min-side-lenkepanel">
           <section className={brukerUnderOppfolging ? "lenkepanel-stor-wrapper" : "lenkepanel-liten-wrapper"}>
-            <Utbetaling className={brukerUnderOppfolging ? "utbetalings-flis-stor" : "utbetalings-flis"} />
+            <Utbetaling size={brukerUnderOppfolging ? "large" : "small"} />
             <KommunikasjonsFlis size={brukerUnderOppfolging ? "large" : "small"} />
           </section>
           <SisteSakerPanel />

@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "@navikt/ds-react";
-import "./Lenkeliste.css";
 import { logAmplitudeEvent } from "../utils/amplitude";
+import CSS from "./Lenkeliste.module.css";
 
 const Lenkeliste = ({ lenker }) => (
-  <nav className="flere-tjenester-nav">
+  <nav className={CSS.nav}>
     {lenker.map((lenke) => {
       return (
-        <div className="flere-tjenster-link" key={lenke.url}>
+        <div className={CSS.link} key={lenke.url}>
           <Link href={lenke.url} onClick={() => logAmplitudeEvent("Flere tjenester - " + lenke.tittel)}>
             {lenke.tittel}
           </Link>

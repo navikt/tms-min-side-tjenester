@@ -14,6 +14,10 @@ svg {
   padding: 24px !important;
 }
 
+.flere-tjenester {
+  margin-bottom: 1.5rem;
+}
+
 .flere-tjenester-header {
   display: flex;
   flex-direction: row;
@@ -28,7 +32,7 @@ svg {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .lenkepanel-stor-wrapper {
@@ -44,12 +48,13 @@ svg {
 
 @media (min-width: 0px) {
   .lenkepanel-liten-wrapper {
+    display: flex;
     flex-direction: column;
   }
 }
 
 @media (min-width: 648px) {
   .lenkepanel-liten-wrapper {
-    flex-direction: row;
+    display: grid;
   }
 }

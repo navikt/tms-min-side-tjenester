@@ -1,26 +1,26 @@
-.flere-tjenester-nav {
+.nav {
   display: flex;
   flex-wrap: wrap;
   text-align: left;
 }
 
-.flere-tjenster-link {
+.link {
   min-width: 33.33%;
   margin-bottom: 0.5rem;
 }
 
-.flere-tjenster-link:not(:first-child):not(:nth-child(2)) {
+.link:not(:first-child):not(:nth-child(2)) {
   flex-grow:0;
 }
 
 @media (max-width: 648px) {
-  .flere-tjenster-link {
+  .link {
     flex: 1 1 50%;
   }
 }
 
 @media (max-width: 448px) {
-  .flere-tjenster-link {
+  .link {
     flex: 1 1 100%;
   }
 }
