@@ -47,5 +47,7 @@
 }
 
 .chevron {
+    min-width: 22px !important;
+    min-height: 22px !important;
     margin-left: 0.5rem;
 }
