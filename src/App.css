@@ -10,10 +10,6 @@ svg {
   width: 22px !important;
 }
 
-.navds-panel {
-  padding: 24px !important;
-}
-
 .flere-tjenester {
   margin-bottom: 1.5rem;
 }
@@ -32,7 +28,6 @@ svg {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 1.5rem;
 }
 
 .lenkepanel-stor-wrapper {
@@ -51,10 +46,19 @@ svg {
     display: flex;
     flex-direction: column;
   }
+
+  .navds-panel {
+    padding: 16px !important;
+  }
 }
 
 @media (min-width: 648px) {
   .lenkepanel-liten-wrapper {
     display: grid;
+    gap: 1.5rem;
+  }
+
+  .navds-panel {
+    padding: 24px !important;
   }
 }

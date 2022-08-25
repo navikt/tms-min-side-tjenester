@@ -20,13 +20,13 @@
 @media (min-width: 0px) {
     .flis {
         width: 100%;
-        margin: 0;
+        margin-bottom: 1rem;
     }
 }
 
 @media (min-width: 648px) {
     .flis {
-        margin: 0;
+        margin-bottom: 1.5rem;
     }
 
     .flis_large {
