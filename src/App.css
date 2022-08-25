@@ -47,6 +47,10 @@ svg {
     flex-direction: column;
   }
 
+  .lenkepanel-stor-wrapper {
+    margin-bottom: 0;
+  }
+
   .navds-panel {
     padding: 16px !important;
   }
@@ -56,6 +60,10 @@ svg {
   .lenkepanel-liten-wrapper {
     display: grid;
     gap: 1.5rem;
+  }
+
+  .lenkepanel-stor-wrapper {
+    margin-bottom: 1.5rem;
   }
 
   .navds-panel {
