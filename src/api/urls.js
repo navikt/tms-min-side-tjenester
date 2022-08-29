@@ -15,8 +15,8 @@ export const getEnvironment = () => {
 
 const OPPFOLGING_URL = {
   local: "http://localhost:3000/api/oppfolging",
-  development: "https://person.dev.nav.no/dittnav-api/oppfolging",
-  production: "https://person.nav.no/dittnav-api/oppfolging",
+  development: "https://www.dev.nav.no/dittnav-api/oppfolging",
+  production: "https://www.nav.no/dittnav-api/oppfolging",
 };
 
 const STILLINGER_URL = {
