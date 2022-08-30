@@ -10,7 +10,7 @@ import KommunikasjonsFlis from "./components/kommunikasjonsflis/KommunikasjonsFl
 import SisteSakerPanel from "./components/siste-saker-panel/SisteSakerPanel";
 import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
 import "@navikt/ds-css";
-import "./App.css";
+import CSS from "./App.module.css";
 
 function App() {
   const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
@@ -23,9 +23,9 @@ function App() {
 
   return (
     <>
-      <section className="page-wrapper-microfrontend">
+      <section className={CSS.page_wrapper_microfrontend}>
         <section className="min-side-lenkepanel">
-          <section className={brukerUnderOppfolging ? "lenkepanel-stor-wrapper" : "lenkepanel-liten-wrapper"}>
+          <section className={brukerUnderOppfolging ? CSS.lenkepanel_stor_wrapper : CSS.lenkepanel_liten_wrapper}>
             <Utbetaling size={brukerUnderOppfolging ? "large" : "small"} />
             <KommunikasjonsFlis size={brukerUnderOppfolging ? "large" : "small"} />
           </section>
@@ -33,9 +33,9 @@ function App() {
         </section>
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
       </section>
-      <div className="flere-tjenester">
+      <div className={CSS.flere_tjenester}>
         <Panel>
-          <Heading spacing level="2" size="medium" className="flere-tjenester-header">
+          <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
             Flere tjenester
           </Heading>
           <Lenkeliste lenker={lenker} />

@@ -1,4 +1,4 @@
-.page-wrapper-microfrontend {
+.page_wrapper_microfrontend {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -10,11 +10,11 @@ svg {
   width: 22px !important;
 }
 
-.flere-tjenester {
+.flere_tjenester {
   margin-bottom: 2rem;
 }
 
-.flere-tjenester-header {
+.flere_tjenester_header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -24,13 +24,13 @@ svg {
   font-weight: bold !important;
 }
 
-.lenkepanel-liten-wrapper {
+.lenkepanel_liten_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
-.lenkepanel-stor-wrapper {
+.lenkepanel_stor_wrapper {
   display: flex;
   flex-direction: column;
 }
@@ -41,23 +41,23 @@ svg {
 }
 
 @media (min-width: 0px) {
-  .lenkepanel-liten-wrapper {
+  .lenkepanel_liten_wrapper {
     display: flex;
     flex-direction: column;
   }
 
-  .lenkepanel-stor-wrapper {
+  .lenkepanel_stor_wrapper {
     margin-bottom: 0;
   }
 }
 
 @media (min-width: 648px) {
-  .lenkepanel-liten-wrapper {
+  .lenkepanel_liten_wrapper {
     display: grid;
     gap: 1.5rem;
   }
 
-  .lenkepanel-stor-wrapper {
+  .lenkepanel_stor_wrapper {
     margin-bottom: 2rem;
   }
 }
