@@ -40,7 +40,6 @@ svg {
   height: 18px;
 }
 
-
 @media (min-width: 0px) {
   .lenkepanel-liten-wrapper {
     display: flex;
@@ -49,10 +48,6 @@ svg {
 
   .lenkepanel-stor-wrapper {
     margin-bottom: 0;
-  }
-
-  .navds-panel {
-    padding: 16px !important;
   }
 }
 
@@ -64,9 +59,5 @@ svg {
 
   .lenkepanel-stor-wrapper {
     margin-bottom: 1.5rem;
-  }
-
-  .navds-panel {
-    padding: 24px !important;
   }
 }
