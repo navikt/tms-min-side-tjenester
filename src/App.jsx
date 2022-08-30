@@ -9,8 +9,8 @@ import Utbetaling from "./components/utbetaling/Utbetaling";
 import KommunikasjonsFlis from "./components/kommunikasjonsflis/KommunikasjonsFlis";
 import SisteSakerPanel from "./components/siste-saker-panel/SisteSakerPanel";
 import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
-import "@navikt/ds-css";
 import CSS from "./App.module.css";
+import "@navikt/ds-css";
 
 function App() {
   const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
