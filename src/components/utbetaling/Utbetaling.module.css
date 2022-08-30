@@ -20,8 +20,13 @@
 @media (min-width: 0px) {
   .flis {
     width: 100%;
-    margin-bottom: 0.5rem;
+    margin: 2rem 0 0.5rem 0;
     padding: 0.75rem 1rem !important;
+  }
+
+  .flis_large {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem !important;
   }
 }
 
@@ -32,6 +37,8 @@
   }
 
   .flis_large {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem !important;
     width: 24.5rem;
   }
 }
