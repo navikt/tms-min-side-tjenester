@@ -5,7 +5,7 @@
   color: #262626;
 }
 
-svg {
+.page_wrapper_microfrontend > svg {
   height: 22px !important;
   width: 22px !important;
 }
@@ -49,6 +49,10 @@ svg {
   .lenkepanel_stor_wrapper {
     margin-bottom: 0;
   }
+
+  .page_wrapper_microfrontend {
+    margin: 0 1rem;
+  }
 }
 
 @media (min-width: 648px) {
@@ -59,5 +63,9 @@ svg {
 
   .lenkepanel_stor_wrapper {
     margin-bottom: 2rem;
+  }
+
+  .page_wrapper_microfrontend {
+    margin: 0;
   }
 }
