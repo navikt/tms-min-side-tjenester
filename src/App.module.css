@@ -5,11 +5,6 @@
   color: #262626;
 }
 
-.page_wrapper_microfrontend > svg {
-  height: 22px !important;
-  width: 22px !important;
-}
-
 .flere_tjenester {
   margin-bottom: 2rem;
 }

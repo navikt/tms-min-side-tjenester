@@ -13,7 +13,7 @@ const SakstemaElement = ({ href, sakstema, sistEndret }) => {
     <div className={CSS.element} onClick={() => logAmplitudeEvent("Siste saker - " + sakstema)}>
       <div className={CSS.content_wrapper}>
         <div className={CSS.ikon}>
-          <FileContent />
+          <FileContent fontSize="1.375rem" />
         </div>
         <div>
           <Link href={href} className={CSS.lenke}>
@@ -24,7 +24,7 @@ const SakstemaElement = ({ href, sakstema, sistEndret }) => {
           </Detail>
         </div>
       </div>
-      <Next className={CSS.chevron} />
+      <Next className={CSS.chevron} fontSize="1.5rem" />
     </div>
   );
 };

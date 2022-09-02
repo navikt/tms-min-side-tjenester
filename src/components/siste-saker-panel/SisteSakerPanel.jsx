@@ -52,7 +52,7 @@ const SisteSakerPanel = () => {
             }}
           >
             <div className={CSS.ikon}>
-              <FileContent />
+              <FileContent fontSize="1.375rem" />
             </div>
             <LinkPanel.Title className={CSS.panel_liten_tittel}>
               {translate.formatMessage({ id: "dine.siste.saker" })}
