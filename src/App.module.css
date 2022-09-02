@@ -1,24 +1,15 @@
-.page-wrapper-microfrontend {
+.page_wrapper_microfrontend {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   color: #262626;
 }
 
-svg {
-  height: 22px !important;
-  width: 22px !important;
+.flere_tjenester {
+  margin-bottom: 2rem;
 }
 
-.navds-panel {
-  padding: 24px !important;
-}
-
-.flere-tjenester {
-  margin-bottom: 1.5rem;
-}
-
-.flere-tjenester-header {
+.flere_tjenester_header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -28,14 +19,13 @@ svg {
   font-weight: bold !important;
 }
 
-.lenkepanel-liten-wrapper {
+.lenkepanel_liten_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 1.5rem;
 }
 
-.lenkepanel-stor-wrapper {
+.lenkepanel_stor_wrapper {
   display: flex;
   flex-direction: column;
 }
@@ -45,16 +35,24 @@ svg {
   height: 18px;
 }
 
-
 @media (min-width: 0px) {
-  .lenkepanel-liten-wrapper {
+  .lenkepanel_liten_wrapper {
     display: flex;
     flex-direction: column;
+  }
+
+  .lenkepanel_stor_wrapper {
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: 648px) {
-  .lenkepanel-liten-wrapper {
+  .lenkepanel_liten_wrapper {
     display: grid;
+    gap: 1.5rem;
+  }
+
+  .lenkepanel_stor_wrapper {
+    margin-bottom: 2rem;
   }
 }

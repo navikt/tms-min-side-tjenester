@@ -18,7 +18,7 @@ const KommunikasjonsElement = ({ href, tittel, ingress, ikon }) => {
           </Detail>
         </div>
       </div>
-      <Next className="chevron" />
+      <Next className={CSS.chevron} />
     </a>
   );
 };

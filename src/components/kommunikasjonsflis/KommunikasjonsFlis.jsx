@@ -20,13 +20,13 @@ const KommunikasjonsFlis = ({ size }) => {
             href={innboksUrl}
             tittel="lenkepanel.hoyre.lenketekst.innboks"
             ingress="lenkepanel.hoyre.ingress.innboks"
-            ikon={<Email />}
+            ikon={<Email fontSize="1.375rem" />}
           />
           <KommunikasjonsElement
             href={dialogMedVeilederUrl}
             tittel="lenkepanel.hoyre.lenketekst.dialog"
             ingress="lenkepanel.hoyre.ingress.dialog"
-            ikon={<DialogDots />}
+            ikon={<DialogDots fontSize="1.375rem" />}
           />
         </Panel>
       ) : (

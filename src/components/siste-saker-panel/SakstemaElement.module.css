@@ -1,53 +1,52 @@
 .element {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1rem 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem 1rem 0;
 }
 
 .content_wrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .dato {
-    margin-bottom: 0 !important;
-    color: #707070 !important;
-    font-weight: 100 !important;
-    font-size: 16px !important;
+  margin-bottom: 0 !important;
+  color: #707070 !important;
+  font-weight: 100 !important;
+  font-size: 16px !important;
 }
 
 .ikon {
-    display: flex;
-    align-self: center;
-    overflow: visible;
-    padding: 1rem;
-    margin: 0 1.5rem 0 0;
-    background-color: #CCE2F0;
-    border-radius: 50%;
+  display: flex;
+  align-self: center;
+  overflow: visible;
+  padding: 0.8125rem;
+  margin: 0 1.5rem 0 0;
+  background-color: #cce2f0;
+  border-radius: 50%;
 }
 
 .lenke {
-    color: #262626 !important;
-    text-decoration: none !important;
-    font-weight: bolder;
+  color: #262626 !important;
+  text-decoration: none !important;
+  font-weight: bolder;
 }
 
 .element:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.element:hover > div > div > a{
-    text-decoration: underline !important;
+.element:hover > div > div > a {
+  text-decoration: underline !important;
 }
 
-.element:hover > svg.chevron{
-    transition-duration: 0.2s;
-    transform: translate(3px, 0);
+.element:hover > svg.chevron {
+  transition-duration: 0.2s;
+  transform: translate(3px, 0);
 }
 
 .chevron {
-    margin-left: 0.5rem;
-    overflow: visible;
+  margin-left: 0.5rem;
+  overflow: visible;
 }
-

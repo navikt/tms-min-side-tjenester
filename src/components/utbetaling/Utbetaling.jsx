@@ -19,7 +19,7 @@ const Utbetaling = ({ size }) => {
       >
         <div className={CSS.content_wrapper}>
           <div className={CSS.ikon}>
-            <Money />
+            <Money fontSize="1.375rem" />
           </div>
           <LinkPanel.Title className={CSS.tekst}>
             {translate.formatMessage({ id: "utbetalinger.lenketekst" })}
