@@ -14,18 +14,18 @@ const KommunikasjonsFlis = ({ size }) => {
       {size === "large" ? (
         <Panel className={CSS.large}>
           <Heading spacing level="2" size="medium">
-            {translate.formatMessage({ id: "lenkepanel.hoyre.tittel" })}
+            {translate.formatMessage({ id: "kommunikasjonsflis.tittel" })}
           </Heading>
           <KommunikasjonsElement
             href={innboksUrl}
-            tittel="lenkepanel.hoyre.lenketekst.innboks"
-            ingress="lenkepanel.hoyre.ingress.innboks"
+            tittel="kommunikasjonsflis.lenketekst.innboks"
+            ingress="kommunikasjonsflis.ingress.innboks"
             ikon={<Email fontSize="1.375rem" />}
           />
           <KommunikasjonsElement
             href={dialogMedVeilederUrl}
-            tittel="lenkepanel.hoyre.lenketekst.dialog"
-            ingress="lenkepanel.hoyre.ingress.dialog"
+            tittel="kommunikasjonsflis.lenketekst.dialog"
+            ingress="kommunikasjonsflis.ingress.dialog"
             ikon={<DialogDots fontSize="1.375rem" />}
           />
         </Panel>
@@ -37,7 +37,7 @@ const KommunikasjonsFlis = ({ size }) => {
                 <Email />
               </div>
               <LinkPanel.Title className={CSS.small_tittel}>
-                {translate.formatMessage({ id: "lenkepanel.hoyre.lenketekst.innboks" })}
+                {translate.formatMessage({ id: "kommunikasjonsflis.lenketekst.innboks" })}
               </LinkPanel.Title>
             </div>
           </LinkPanel>

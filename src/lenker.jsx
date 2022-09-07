@@ -20,71 +20,71 @@ import {
 
 export const lenker = {
   ledigeStillinger: {
-    tittel: "Ledige stillinger",
+    tittel: "ledige.stillinger",
     url: stillingerUrl,
   },
   uforetrygd: {
-    tittel: "Uføretrygd",
+    tittel: "uforetrygd",
     url: uforetrygdUrl,
   },
   dineForeldrepenger: {
-    tittel: "Dine foreldrepenger",
+    tittel: "dine.foreldrepenger",
     url: foreldrepengerUrl,
   },
   aktivitetsplan: {
-    tittel: "Aktivitetsplan",
+    tittel: "aktivitetsplan",
     url: aktivitetsplanUrl,
   },
   meldekort: {
-    tittel: "Meldekort",
+    tittel: "meldekort",
     url: meldekortUrl,
   },
   personopplysninger: {
-    tittel: "Personopplysninger",
+    tittel: "personopplysninger",
     url: personopplysningerUrl,
   },
   skjemaer: {
-    tittel: "Skjemaer",
+    tittel: "skjemaer",
     url: skjemaerUrl,
   },
   dinPensjon: {
-    tittel: "Din pensjon",
+    tittel: "din.pensjon",
     url: pensjonUrl,
   },
   dineStillingssok: {
-    tittel: "Dine stillingssøk",
+    tittel: "dine.stillingssok",
     url: stillingsokUrl,
   },
   veilederArbeidssoker: {
-    tittel: "Veileder for arbeidssøker",
+    tittel: "veileder.arbeidssoker",
     url: arbeidssokerUrl,
   },
   registrerDegSomArbeidssoker: {
-    tittel: "Registrer deg som arbeidssøker",
+    tittel: "registrer.deg.som.arbeidssoker",
     url: arbeidssokerRegistreringUrl,
   },
   sosialhjelp: {
-    tittel: "Økonomisk Sosialhjelp",
+    tittel: "sosialhjelp",
     url: sosialhjelpUrl,
   },
   dineFullmakter: {
-    tittel: "Dine fullmakter",
+    tittel: "dine.fullmakter",
     url: fullmakterUrl,
   },
   dinePleiepenger: {
-    tittel: "Dine pleiepenger",
+    tittel: "dine.pleiepenger",
     url: pleiepengerUrl,
   },
   dittSykefravaer: {
-    tittel: "Ditt sykefravær",
+    tittel: "ditt.sykefravaer",
     url: sykefravaerUrl,
   },
   hjelpemidler: {
-    tittel: "Hjelpemidler",
+    tittel: "hjelpemidler",
     url: hjelpemidlerUrl,
   },
   arbeidsavklaringspenger: {
-    tittel: "Arbeidsavklaringspenger",
+    tittel: "arbeidsavklaringspenger",
     url: arbeidsavklaringspengerUrl,
   },
 };
