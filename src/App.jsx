@@ -11,6 +11,7 @@ import SisteSakerPanel from "./components/siste-saker-panel/SisteSakerPanel";
 import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
 import CSS from "./App.module.css";
 import "@navikt/ds-css";
+import ContentLoader from "./components/content-loader/ContentLoader";
 
 function App() {
   const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
@@ -18,7 +19,7 @@ function App() {
   const lenker = brukerUnderOppfolging ? oppfolgingsLenker : generelleLenker;
 
   if (isLoading) {
-    return null;
+    return <ContentLoader />;
   }
 
   return (
