@@ -12,7 +12,7 @@ const KommunikasjonsElement = ({ href, tittel, ingress, ikon }) => {
       <div className={CSS.content_wrapper}>
         <div className={CSS.ikon}>{ikon}</div>
         <div>
-          <Link className={CSS.lenke}>{translate.formatMessage({ id: tittel })}</Link>
+          <div className={CSS.lenke}>{translate.formatMessage({ id: tittel })}</div>
           <Detail spacing className={CSS.dato}>
             {translate.formatMessage({ id: ingress })}
           </Detail>
