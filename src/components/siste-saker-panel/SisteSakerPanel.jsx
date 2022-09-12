@@ -22,14 +22,14 @@ const SisteSakerPanel = () => {
         <Panel className={CSS.panel}>
           <div className={CSS.heading}>
             <Heading spacing level="2" size="medium">
-              {translate.formatMessage({ id: "lenkepanel.venstre.tittel" })}
+              {translate.formatMessage({ id: "siste.saker.tittel" })}
             </Heading>
             <a
               className={CSS.alle_saker}
               href={mineSakerUrl}
               onClick={() => logAmplitudeEvent("Siste saker - Se alle")}
             >
-              Se alle
+              {translate.formatMessage({ id: "se.alle" })}
             </a>
           </div>
           {saker?.sakstemaer.slice(0, 2).map((sak) => (
