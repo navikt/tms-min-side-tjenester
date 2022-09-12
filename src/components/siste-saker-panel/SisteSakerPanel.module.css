@@ -21,6 +21,10 @@
   padding: 1rem 1rem 0 0;
 }
 
+.panel > a {
+  text-decoration: none;
+}
+
 .ikon {
   display: flex;
   align-self: center;

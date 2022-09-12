@@ -1,5 +1,5 @@
 import { useIntl } from "react-intl";
-import { Link, Detail } from "@navikt/ds-react";
+import { Detail } from "@navikt/ds-react";
 import { Next } from "@navikt/ds-icons";
 import { logAmplitudeEvent } from "../../utils/amplitude";
 import CSS from "./KommunikasjonsElement.module.css";
