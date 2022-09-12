@@ -10,22 +10,20 @@ const SakstemaElement = ({ href, sakstema, sistEndret }) => {
   const { formatDateAndTime } = i18n[translate.locale];
 
   return (
-    <div className={CSS.element} onClick={() => logAmplitudeEvent("Siste saker - " + sakstema)}>
+    <a className={CSS.element} href={href} onClick={() => logAmplitudeEvent("Siste saker - " + sakstema)}>
       <div className={CSS.content_wrapper}>
         <div className={CSS.ikon}>
           <FileContent fontSize="1.375rem" />
         </div>
         <div>
-          <Link href={href} className={CSS.lenke}>
-            {sakstema}
-          </Link>
+          <div className={CSS.lenketekst}>{sakstema}</div>
           <Detail spacing className={CSS.dato}>
             {translate.formatMessage({ id: "lenkepanel.venstre.lenkedetail" }) + formatDateAndTime(sistEndret)}
           </Detail>
         </div>
       </div>
       <Next className={CSS.chevron} fontSize="1.5rem" />
-    </div>
+    </a>
   );
 };
 
