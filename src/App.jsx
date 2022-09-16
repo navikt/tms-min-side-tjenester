@@ -9,13 +9,13 @@ import Utbetaling from "./components/utbetaling/Utbetaling";
 import KommunikasjonsFlis from "./components/kommunikasjonsflis/KommunikasjonsFlis";
 import SisteSakerPanel from "./components/siste-saker-panel/SisteSakerPanel";
 import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
-import CSS from "./App.module.css";
-import "@navikt/ds-css";
 import ContentLoader from "./components/content-loader/ContentLoader";
 import UXTestComponent from "./components/ux-test/UXTestComponent";
+import CSS from "./App.module.css";
+import "@navikt/ds-css";
 
 function App() {
-  const { data, isLoading, isSuccess } = useQuery(oppfolgingUrl, fetcher);
+  const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
   const brukerUnderOppfolging = data?.erBrukerUnderOppfolging;
   const lenker = brukerUnderOppfolging ? oppfolgingsLenker : generelleLenker;
 
