@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const useScript = ({ ready }) => {
+const useScript = (ready) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.async = true;

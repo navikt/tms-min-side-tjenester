@@ -15,7 +15,7 @@ import ContentLoader from "./components/content-loader/ContentLoader";
 import UXTestComponent from "./components/ux-test/UXTestComponent";
 
 function App() {
-  const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
+  const { data, isLoading, isSuccess } = useQuery(oppfolgingUrl, fetcher);
   const brukerUnderOppfolging = data?.erBrukerUnderOppfolging;
   const lenker = brukerUnderOppfolging ? oppfolgingsLenker : generelleLenker;
 
@@ -34,16 +34,16 @@ function App() {
           <SisteSakerPanel />
         </section>
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
+        <UXTestComponent ready={true} />
+        <div className={CSS.flere_tjenester}>
+          <Panel>
+            <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
+              Flere tjenester
+            </Heading>
+            <Lenkeliste lenker={lenker} />
+          </Panel>
+        </div>
       </section>
-      <UXTestComponent />
-      <div className={CSS.flere_tjenester}>
-        <Panel>
-          <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
-            Flere tjenester
-          </Heading>
-          <Lenkeliste lenker={lenker} />
-        </Panel>
-      </div>
     </>
   );
 }
