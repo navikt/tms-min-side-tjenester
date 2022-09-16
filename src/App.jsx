@@ -9,9 +9,10 @@ import Utbetaling from "./components/utbetaling/Utbetaling";
 import KommunikasjonsFlis from "./components/kommunikasjonsflis/KommunikasjonsFlis";
 import SisteSakerPanel from "./components/siste-saker-panel/SisteSakerPanel";
 import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
+import ContentLoader from "./components/content-loader/ContentLoader";
+import UXTestComponent from "./components/ux-test/UXTestComponent";
 import CSS from "./App.module.css";
 import "@navikt/ds-css";
-import ContentLoader from "./components/content-loader/ContentLoader";
 
 function App() {
   const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
@@ -33,15 +34,16 @@ function App() {
           <SisteSakerPanel />
         </section>
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
+        <UXTestComponent ready={true} />
+        <div className={CSS.flere_tjenester}>
+          <Panel>
+            <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
+              Flere tjenester
+            </Heading>
+            <Lenkeliste lenker={lenker} />
+          </Panel>
+        </div>
       </section>
-      <div className={CSS.flere_tjenester}>
-        <Panel>
-          <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
-            Flere tjenester
-          </Heading>
-          <Lenkeliste lenker={lenker} />
-        </Panel>
-      </div>
     </>
   );
 }
