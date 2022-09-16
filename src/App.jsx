@@ -34,6 +34,7 @@ function App() {
         </section>
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
       </section>
+      <div data-uxsignals-embed="study-5x0zp08elt" style="max-width: 620px"></div>
       <div className={CSS.flere_tjenester}>
         <Panel>
           <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
