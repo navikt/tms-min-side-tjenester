@@ -27,8 +27,8 @@ const STILLINGER_URL = {
 
 const UFORETRYGD_URL = {
   local: "http://localhost:3000/uforetrygd",
-  development: `https://tjenester-q1.nav.no/pselv/publisering/uforetrygd.jsf?context=ut`,
-  production: `https://tjenester.nav.no/pselv/publisering/uforetrygd.jsf?context=ut`,
+  development: `https://pensjon-pselv-q2-gcp.dev.nav.no/pselv/publisering/uforetrygd.jsf?context=ut`,
+  production: `https://www.nav.no/pselv/publisering/uforetrygd.jsf?context=ut`,
 };
 
 const FORELDREPENGER_URL = {
