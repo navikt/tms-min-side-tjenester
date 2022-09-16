@@ -12,6 +12,7 @@ import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
 import CSS from "./App.module.css";
 import "@navikt/ds-css";
 import ContentLoader from "./components/content-loader/ContentLoader";
+import UXTestComponent from "./components/ux-test/UXTestComponent";
 
 function App() {
   const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
@@ -34,7 +35,7 @@ function App() {
         </section>
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
       </section>
-      <div data-uxsignals-embed="study-5x0zp08elt" style={{ maxWidth: "443 px" }}></div>
+      <UXTestComponent />
       <div className={CSS.flere_tjenester}>
         <Panel>
           <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
