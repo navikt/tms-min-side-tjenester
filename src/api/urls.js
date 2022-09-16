@@ -27,8 +27,8 @@ const STILLINGER_URL = {
 
 const UFORETRYGD_URL = {
   local: "http://localhost:3000/uforetrygd",
-  development: `https://tjenester-q1.nav.no/pselv/publisering/uforetrygd.jsf?context=ut`,
-  production: `https://tjenester.nav.no/pselv/publisering/uforetrygd.jsf?context=ut`,
+  development: `https://pensjon-pselv-q2-gcp.dev.nav.no/pselv/publisering/uforetrygd.jsf?context=ut`,
+  production: `https://www.nav.no/pselv/publisering/uforetrygd.jsf?context=ut`,
 };
 
 const FORELDREPENGER_URL = {
@@ -63,8 +63,8 @@ const SJEMAER_URL = {
 
 const PENSJON_URL = {
   local: "http://localhost:3000/pensjon",
-  development: "https://tjenester-q1.nav.no/pselv/publisering/dinpensjon.jsf",
-  production: "https://tjenester.nav.no/pselv/publisering/dinpensjon.jsf",
+  development: "https://pensjon-pselv-q2-gcp.dev.nav.no/pselv",
+  production: "https://www.nav.no/pselv",
 };
 
 const STILLINGSOK_URL = {
