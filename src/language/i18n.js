@@ -13,7 +13,7 @@ const i18n = {
     oneMasculine: () => "én",
     oneFeminine: () => "éi",
     oneNeuter: () => "ett",
-    formatDateMonth: (date) => dayjs(date).format("DD. MMMM YYYY"),
+    formatDateMonth: (date) => dayjs(date).locale("nb").format("D. MMMM YYYY"),
     formatDayAndMonth: (date) => dayjs(date).locale("nb").format("DD.MM.YYYY"),
     formatDateAndTime: (date) => dayjs(date).locale("nb").format("DD.MM.YYYY - HH:mm"),
   },
