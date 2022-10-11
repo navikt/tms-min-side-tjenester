@@ -7,7 +7,7 @@ import CSS from "./SakstemaElement.module.css";
 
 const SakstemaElement = ({ href, sakstema, sistEndret }) => {
   const translate = useIntl();
-  const { formatDateAndTime } = i18n[translate.locale];
+  const { formatDateMonth } = i18n[translate.locale];
 
   return (
     <a className={CSS.element} href={href} onClick={() => logAmplitudeEvent("Siste saker - " + sakstema)}>
@@ -18,7 +18,7 @@ const SakstemaElement = ({ href, sakstema, sistEndret }) => {
         <div>
           <div className={CSS.lenketekst}>{sakstema}</div>
           <Detail spacing className={CSS.dato}>
-            {translate.formatMessage({ id: "siste.saker.lenkedetail" }) + formatDateAndTime(sistEndret)}
+            {translate.formatMessage({ id: "siste.saker.lenkedetail" }) + formatDateMonth(sistEndret)}
           </Detail>
         </div>
       </div>
