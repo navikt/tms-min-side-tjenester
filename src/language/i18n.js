@@ -1,4 +1,5 @@
 import "dayjs";
+import "dayjs/locale/nb";
 import dayjs from "dayjs";
 
 dayjs.locale("nb");

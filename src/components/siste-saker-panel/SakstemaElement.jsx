@@ -4,7 +4,6 @@ import { Detail } from "@navikt/ds-react";
 import { Next, FileContent } from "@navikt/ds-icons";
 import i18n from "../../language/i18n";
 import CSS from "./SakstemaElement.module.css";
-import "dayjs/locale/nb";
 
 const SakstemaElement = ({ href, sakstema, sistEndret }) => {
   const translate = useIntl();
