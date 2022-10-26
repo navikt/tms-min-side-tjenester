@@ -148,7 +148,7 @@ const INNBOKS_URL = {
 const ARBEIDSAVKLARINGSPENGER_URL = {
   local: "http://localhost:3000/aap#kort",
   development: "https://aap-innsyn.dev.nav.no/aap/mine-aap/",
-  production: "https://www.nav.no/aap#kort",
+  production: "https://www.nav.no/aap/mine-aap",
 };
 
 export const oppfolgingUrl = OPPFOLGING_URL[getEnvironment()];
