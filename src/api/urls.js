@@ -139,6 +139,12 @@ const TJENESTER_URL = {
   production: "https://tjenester.nav.no",
 };
 
+const UTBETALINGSOVERSIKT_URL = {
+  local: "http://localhost:3000/utbetalingsoversikt",
+  development: "https://www.dev.nav.no/utbetalingsoversikt",
+  production: "https://tjenester.nav.no/utbetalingsoversikt",
+};
+
 const INNBOKS_URL = {
   local: "http://localhost:3000/innboks",
   development: "https://innboks.dev.nav.no",
@@ -174,8 +180,8 @@ export const dittNavApiUrl = DITTNAV_API_URL[getEnvironment()];
 export const tjenesterUrl = TJENESTER_URL[getEnvironment()];
 export const innboksUrl = INNBOKS_URL[getEnvironment()];
 export const arbeidsavklaringspengerUrl = ARBEIDSAVKLARINGSPENGER_URL[getEnvironment()];
+export const utbetalingsoversiktUrl = UTBETALINGSOVERSIKT_URL[getEnvironment()];
 
-export const utbetalingsoversiktUrl = `${tjenesterUrl}/utbetalingsoversikt`;
 export const dialogMedVeilederUrl = `${navUrl}/arbeid/dialog`;
 export const mineSakerUrl = `${personNavUrl}/mine-saker`;
 export const sakerApiUrl = `${dittNavApiUrl}/saker`;
