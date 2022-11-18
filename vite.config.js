@@ -45,7 +45,7 @@ export default ({ command }) => ({
       entry: resolve(__dirname, "src/Mikrofrontend.jsx"),
       name: "tms-min-side-tjenester",
       formats: ["es"],
-      fileName: () => `bundle.js`,
+      fileName: () => `tms-min-side-tjenester.js`,
     },
   },
   test: {
