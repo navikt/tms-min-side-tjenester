@@ -1,7 +1,7 @@
 apiVersion: "nais.io/v1alpha1"
 kind: "Application"
 metadata:
-  name: tms-min-side-oversikt
+  name: tms-min-side-tjenester
   namespace: min-side
   labels:
     team: min-side
@@ -10,24 +10,24 @@ metadata:
     config.linkerd.io/proxy-memory-request: "128Mi"
 spec:
   envFrom:
-    - secret: tms-min-side-oversikt-secrets
-  image: {{image}}
-  port: 7500
+    - secret: tms-min-side-tjenester-secrets
+  image: {{version}}
+  port: 7700
   liveness:
-    path: /tms-min-side-oversikt/internal/isAlive
+    path: /tms-min-side-tjenester/internal/isAlive
     initialDelay: 10
   readiness:
-    path: /tms-min-side-oversikt/internal/isReady
+    path: /tms-min-side-tjenester/internal/isReady
     initialDelay: 10
   prometheus:
     enabled: true
-    path: /tms-min-side-oversikt/internal/metrics
+    path: /tms-min-side-tjenester/internal/metrics
   replicas:
     min: 2
     max: 4
   ingresses:
-    - "https://person.intern.nav.no/tms-min-side-oversikt"
-    - "https://www.nav.no/tms-min-side-oversikt"
+    - "https://person.intern.nav.no/tms-min-side-tjenester"
+    - "https://www.nav.no/tms-min-side-tjenester"
   resources:
     limits:
       cpu: "3"
