@@ -14,7 +14,9 @@ const UXTweak = () => {
       </Heading>
       <BodyLong className={style.ingress}>{translate.formatMessage({ id: "uxtweak.ingress-1" })}</BodyLong>
       <BodyLong className={style.ingress}>{translate.formatMessage({ id: "uxtweak.ingress-2" })}</BodyLong>
-      <Link href={UXTweakUrl}>{translate.formatMessage({ id: "uxtweak.lenketekst" })}</Link>
+      <Link href={UXTweakUrl} target="_blank">
+        {translate.formatMessage({ id: "uxtweak.lenketekst" })}
+      </Link>
     </Panel>
   );
 };
