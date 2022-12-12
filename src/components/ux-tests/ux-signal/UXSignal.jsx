@@ -1,5 +1,5 @@
-import useScript from "../../hooks/useScript";
-import "./UXTestComponent.css";
+import useScript from "../../../hooks/useScript";
+import "./UXSignal.css";
 
 const UXTestComponent = ({ ready }) => {
   useScript(ready);

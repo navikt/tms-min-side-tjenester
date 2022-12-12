@@ -10,9 +10,9 @@ import KommunikasjonsFlis from "./components/kommunikasjonsflis/KommunikasjonsFl
 import SisteSakerPanel from "./components/siste-saker-panel/SisteSakerPanel";
 import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
 import ContentLoader from "./components/content-loader/ContentLoader";
-import UXTestComponent from "./components/ux-test/UXTestComponent";
 import CSS from "./App.module.css";
 import "@navikt/ds-css";
+import UXTweak from "./components/ux-tests/ux-tweak/UXTweak";
 
 function App() {
   const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
@@ -34,7 +34,7 @@ function App() {
           <SisteSakerPanel />
         </section>
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
-        <UXTestComponent ready={true} />
+        <UXTweak />
         <div className={CSS.flere_tjenester}>
           <Panel>
             <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>

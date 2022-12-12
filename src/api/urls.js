@@ -188,3 +188,4 @@ export const sakerApiUrl = `${dittNavApiUrl}/saker`;
 export const arbeidUrl = `${navUrl}/arbeid`;
 export const soknadUrl = `${navUrl}/soknader`;
 export const dinPensjonUrl = `${tjenesterUrl}/pselv/publisering/dinpensjon.jsf`;
+export const UXTweakUrl = `https://study.uxtweak.com/firstclick/56GYfR7OIEBEdx7xboamf`;
