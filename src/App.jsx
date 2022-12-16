@@ -34,7 +34,6 @@ function App() {
           <SisteSakerPanel />
         </section>
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
-        <UXTweak />
         <div className={CSS.flere_tjenester}>
           <Panel>
             <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
