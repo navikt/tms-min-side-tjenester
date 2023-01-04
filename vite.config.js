@@ -9,8 +9,8 @@ import { terser } from "rollup-plugin-terser";
 import { resolve } from "path";
 
 const imports = {
-  react: "external-react",
-  "react-dom": "external-react-dom",
+  react: "./external-react",
+  "react-dom": "./external-react-dom",
 };
 
 export default ({ command }) => ({
