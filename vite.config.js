@@ -26,11 +26,6 @@ export default ({ command }) => ({
       mockPath: "mock",
       localEnabled: command === "serve",
     }),
-    {
-      ...rollupImportMapPlugin({ imports }),
-      enforce: "pre",
-      apply: "build",
-    },
     terser(),
     cssInjectedByJsPlugin(),
     EnvironmentPlugin({
