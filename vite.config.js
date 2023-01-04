@@ -42,6 +42,7 @@ export default ({ command }) => ({
       entry: resolve(__dirname, "src/Mikrofrontend.jsx"),
       name: "tms-min-side-tjenester",
       formats: ["es"],
+      external: ["react", "react-dom"],
       fileName: () => `tms-min-side-tjenester.js`,
     },
   },
