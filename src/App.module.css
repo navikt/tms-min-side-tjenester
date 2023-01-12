@@ -5,8 +5,13 @@
   color: #262626;
 }
 
-.flere_tjenester {
+.flereTjenester {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
   margin-bottom: 2rem;
+  background-color: rgba(241, 241, 241, 1) !important;
+  border-radius: 8px !important;
 }
 
 .flere_tjenester_header {

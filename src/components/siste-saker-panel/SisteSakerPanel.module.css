@@ -39,6 +39,16 @@
   font-size: 18px !important;
 }
 
+.panel {
+  background-color: rgba(241, 241, 241, 1) !important;
+  border-radius: 8px !important;
+}
+
+.panel_liten {
+  background-color: rgba(241, 241, 241, 1) !important;
+  border-radius: 8px !important;
+}
+
 @media (min-width: 0px) {
   .panel {
     margin: 2rem 0 2rem 0;

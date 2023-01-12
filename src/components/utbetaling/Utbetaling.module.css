@@ -17,6 +17,16 @@
   font-size: 18px !important;
 }
 
+.flis {
+  background-color: rgba(241, 241, 241, 1) !important;
+  border-radius: 8px !important;
+}
+
+.flis_large {
+  background-color: rgba(241, 241, 241, 1) !important;
+  border-radius: 8px !important;
+}
+
 @media (min-width: 0px) {
   .flis {
     width: 100%;
