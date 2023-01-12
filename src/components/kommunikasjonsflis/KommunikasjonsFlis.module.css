@@ -5,12 +5,12 @@
 
 .small {
   font-size: 18px !important;
-  background-color: rgba(241, 241, 241, 1) !important;
+  background-color: #f7f7f7 !important;
   border-radius: 8px !important;
 }
 
 .large {
-  background-color: rgba(241, 241, 241, 1) !important;
+  background-color: #f7f7f7 !important;
   border-radius: 8px !important;
 }
 
