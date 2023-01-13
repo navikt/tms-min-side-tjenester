@@ -16,6 +16,11 @@
   border-radius: 50%;
 }
 
+.flis {
+  background-color: #f7f7f7 !important;
+  border-radius: 8px !important;
+}
+
 @media (min-width: 0px) {
   .flis {
     width: 100%;

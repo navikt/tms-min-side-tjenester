@@ -34,7 +34,7 @@ const KommunikasjonsFlis = ({ size }) => {
           <LinkPanel href={innboksUrl} border={false} className={CSS.small}>
             <div className={CSS.content_wrapper}>
               <div className={CSS.ikon_wrapper}>
-                <Email />
+                <Email fontSize="22px" />
               </div>
               <LinkPanel.Title className={CSS.small_tittel}>
                 {translate.formatMessage({ id: "kommunikasjonsflis.lenketekst.innboks" })}
