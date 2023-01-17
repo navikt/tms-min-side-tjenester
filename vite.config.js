@@ -41,11 +41,14 @@ export default ({ command }) => ({
     }),
   ],
   build: {
-    lib: {
-      entry: resolve(__dirname, "src/Mikrofrontend.jsx"),
-      name: "tms-min-side-tjenester",
-      formats: ["es"],
-      fileName: () => `tms-min-side-tjenester.js`,
+    manifest: true,
+    rollupOptions: {
+      input: resolve(__dirname, "src/Mikrofrontend.jsx"),
+      preserveEntrySignatures: "exports-only",
+      output: {
+        entryFileNames: "tms-min-side-tjenester.js",
+        format: "esm",
+      },
     },
   },
   test: {
