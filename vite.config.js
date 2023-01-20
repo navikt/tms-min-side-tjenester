@@ -39,7 +39,7 @@ export default ({ command }) => ({
       input: resolve(__dirname, "src/Mikrofrontend.jsx"),
       preserveEntrySignatures: "exports-only",
       output: {
-        entryFileNames: "tms-min-side-tjenester.js",
+        entryFileNames: "tms-min-side-tjenester.[hash].js",
         format: "esm",
       },
     },
