@@ -4,7 +4,7 @@ import Mikrofrontend from "./Mikrofrontend";
 import "./index.css";
 
 ReactDOM.render(
-  <React.Fragment>
+  <React.StrictMode>
     <div className="page-wrapper">
       <div className="page-layout">
         <main>
@@ -12,6 +12,6 @@ ReactDOM.render(
         </main>
       </div>
     </div>
-  </React.Fragment>,
+  </React.StrictMode>,
   document.getElementById("root")
 );
