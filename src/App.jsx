@@ -1,5 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
+import handleViewport from "react-in-viewport";
 import { oppfolgingUrl } from "./api/urls";
 import { fetcher } from "./api/api";
 import { Heading, Panel } from "@navikt/ds-react";
@@ -12,12 +13,13 @@ import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
 import ContentLoader from "./components/content-loader/ContentLoader";
 import CSS from "./App.module.css";
 import "@navikt/ds-css";
-import UXTweak from "./components/ux-tests/ux-tweak/UXTweak";
 
 function App() {
   const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
   const brukerUnderOppfolging = data?.erBrukerUnderOppfolging;
   const lenker = brukerUnderOppfolging ? oppfolgingsLenker : generelleLenker;
+
+  const ViewportUtbetaling = handleViewport(Utbetaling);
 
   if (isLoading) {
     return <ContentLoader />;
@@ -28,7 +30,7 @@ function App() {
       <section className={CSS.page_wrapper_microfrontend}>
         <section className="min-side-lenkepanel">
           <section className={brukerUnderOppfolging ? CSS.lenkepanel_stor_wrapper : CSS.lenkepanel_liten_wrapper}>
-            <Utbetaling size={brukerUnderOppfolging ? "large" : "small"} />
+            <ViewportUtbetaling size={brukerUnderOppfolging ? "large" : "small"} />
             <KommunikasjonsFlis size={brukerUnderOppfolging ? "large" : "small"} />
           </section>
           <SisteSakerPanel />
