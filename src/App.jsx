@@ -10,14 +10,13 @@ import KommunikasjonsFlis from "./components/kommunikasjonsflis/KommunikasjonsFl
 import SisteSakerPanel from "./components/siste-saker-panel/SisteSakerPanel";
 import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
 import ContentLoader from "./components/content-loader/ContentLoader";
+import UXTweak from "./components/ux-tests/ux-tweak/UXTweak";
 import CSS from "./App.module.css";
 import "@navikt/ds-css";
-import UXTweak from "./components/ux-tests/ux-tweak/UXTweak";
 
 function App() {
-  const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
-  const brukerUnderOppfolging = data?.erBrukerUnderOppfolging;
-  const lenker = brukerUnderOppfolging ? oppfolgingsLenker : generelleLenker;
+  const { data: underOppfolging, isLoading } = useQuery(oppfolgingUrl, fetcher);
+  const lenker = underOppfolging ? oppfolgingsLenker : generelleLenker;
 
   if (isLoading) {
     return <ContentLoader />;
@@ -27,13 +26,13 @@ function App() {
     <>
       <section className={CSS.page_wrapper_microfrontend}>
         <section className="min-side-lenkepanel">
-          <section className={brukerUnderOppfolging ? CSS.lenkepanel_stor_wrapper : CSS.lenkepanel_liten_wrapper}>
-            <Utbetaling size={brukerUnderOppfolging ? "large" : "small"} />
-            <KommunikasjonsFlis size={brukerUnderOppfolging ? "large" : "small"} />
+          <section className={underOppfolging ? CSS.lenkepanel_stor_wrapper : CSS.lenkepanel_liten_wrapper}>
+            <Utbetaling size={underOppfolging ? "large" : "small"} />
+            <KommunikasjonsFlis size={underOppfolging ? "large" : "small"} />
           </section>
           <SisteSakerPanel />
         </section>
-        {brukerUnderOppfolging ? null : <GenerelleFliser />}
+        {underOppfolging ? null : <GenerelleFliser />}
         <div className={CSS.flereTjenester}>
           <Panel className={CSS.flereTjenester}>
             <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
