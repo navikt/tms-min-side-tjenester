@@ -1,5 +1,4 @@
-import React from "react";
-import { useQuery } from "react-query";
+import useSWRImmutable from "swr/immutable";
 import { oppfolgingUrl } from "./api/urls";
 import { fetcher } from "./api/api";
 import { Heading, Panel } from "@navikt/ds-react";
@@ -12,12 +11,11 @@ import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
 import ContentLoader from "./components/content-loader/ContentLoader";
 import CSS from "./App.module.css";
 import "@navikt/ds-css";
-import UXTweak from "./components/ux-tests/ux-tweak/UXTweak";
 
 function App() {
-  const { data, isLoading } = useQuery(oppfolgingUrl, fetcher);
-  const brukerUnderOppfolging = data?.erBrukerUnderOppfolging;
-  const lenker = brukerUnderOppfolging ? oppfolgingsLenker : generelleLenker;
+  const { data, isLoading } = useSWRImmutable(oppfolgingUrl, fetcher);
+  const lenker = data?.erUnderOppfolging ? oppfolgingsLenker : generelleLenker;
+  const brukerUnderOppfolging = data?.erUnderOppfolging;
 
   if (isLoading) {
     return <ContentLoader />;
