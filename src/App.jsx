@@ -1,5 +1,4 @@
-import React from "react";
-import { useQuery } from "react-query";
+import useSWRImmutable from "swr/immutable";
 import { oppfolgingUrl } from "./api/urls";
 import { fetcher } from "./api/api";
 import { Heading, Panel } from "@navikt/ds-react";
@@ -10,13 +9,13 @@ import KommunikasjonsFlis from "./components/kommunikasjonsflis/KommunikasjonsFl
 import SisteSakerPanel from "./components/siste-saker-panel/SisteSakerPanel";
 import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
 import ContentLoader from "./components/content-loader/ContentLoader";
-import UXTweak from "./components/ux-tests/ux-tweak/UXTweak";
 import CSS from "./App.module.css";
 import "@navikt/ds-css";
 
 function App() {
-  const { data: underOppfolging, isLoading } = useQuery(oppfolgingUrl, fetcher);
-  const lenker = underOppfolging ? oppfolgingsLenker : generelleLenker;
+  const { data, isLoading } = useSWRImmutable(oppfolgingUrl, fetcher);
+  const lenker = data?.erUnderOppfolging ? oppfolgingsLenker : generelleLenker;
+  const brukerUnderOppfolging = data?.erUnderOppfolging;
 
   if (isLoading) {
     return <ContentLoader />;
@@ -26,13 +25,13 @@ function App() {
     <>
       <section className={CSS.page_wrapper_microfrontend}>
         <section className="min-side-lenkepanel">
-          <section className={underOppfolging ? CSS.lenkepanel_stor_wrapper : CSS.lenkepanel_liten_wrapper}>
-            <Utbetaling size={underOppfolging ? "large" : "small"} />
-            <KommunikasjonsFlis size={underOppfolging ? "large" : "small"} />
+          <section className={brukerUnderOppfolging ? CSS.lenkepanel_stor_wrapper : CSS.lenkepanel_liten_wrapper}>
+            <Utbetaling size={brukerUnderOppfolging ? "large" : "small"} />
+            <KommunikasjonsFlis size={brukerUnderOppfolging ? "large" : "small"} />
           </section>
           <SisteSakerPanel />
         </section>
-        {underOppfolging ? null : <GenerelleFliser />}
+        {brukerUnderOppfolging ? null : <GenerelleFliser />}
         <div className={CSS.flereTjenester}>
           <Panel className={CSS.flereTjenester}>
             <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>

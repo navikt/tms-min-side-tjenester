@@ -1,5 +1,4 @@
-import React from "react";
-import { useQuery } from "react-query";
+import useSWRImmutable from "swr/immutable";
 import { useIntl } from "react-intl";
 import { fetcher } from "../../api/api";
 import { LinkPanel, Panel, Heading } from "@navikt/ds-react";
@@ -10,7 +9,7 @@ import { FileContent } from "@navikt/ds-icons";
 import CSS from "./SisteSakerPanel.module.css";
 
 const SisteSakerPanel = () => {
-  const { data: saker } = useQuery(sakerApiUrl, fetcher);
+  const { data: saker } = useSWRImmutable(sakerApiUrl, fetcher);
 
   const translate = useIntl();
 
@@ -33,7 +32,12 @@ const SisteSakerPanel = () => {
             </a>
           </div>
           {saker?.sakstemaer.slice(0, 2).map((sak) => (
-            <SakstemaElement href={sak.detaljvisningUrl} sakstema={sak.navn} sistEndret={sak.sistEndret} />
+            <SakstemaElement
+              key={sak.kode}
+              href={sak.detaljvisningUrl}
+              sakstema={sak.navn}
+              sistEndret={sak.sistEndret}
+            />
           ))}
         </Panel>
       ) : (
