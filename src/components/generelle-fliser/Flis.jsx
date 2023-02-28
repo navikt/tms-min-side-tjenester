@@ -18,7 +18,7 @@ const Flis = ({ tittel, ikon, href }) => {
           style={{
             display: "grid",
             gridAutoFlow: "column",
-            gap: "var(--navds-spacing-8)",
+            gap: "var(--a-spacing-8)",
             alignItems: "center",
           }}
         >
