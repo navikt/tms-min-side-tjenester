@@ -21,7 +21,7 @@ const SisteSakerPanel = () => {
         <Panel className={CSS.panel}>
           <div className={CSS.heading}>
             <Heading spacing level="2" size="medium">
-              {translate.formatMessage({ id: "siste.saker.tittel" })}
+              {translate.formatMessage({ id: "sisteSakerTittel" })}
             </Heading>
             <a
               className={CSS.alle_saker}
