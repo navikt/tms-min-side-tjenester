@@ -11,6 +11,7 @@ import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
 import ContentLoader from "./components/content-loader/ContentLoader";
 import CSS from "./App.module.css";
 import "@navikt/ds-css";
+import UXTestComponent from "./components/ux-tests/ux-signal/UXSignal";
 
 function App() {
   const { data, isLoading } = useSWRImmutable(oppfolgingUrl, fetcher);
@@ -32,6 +33,7 @@ function App() {
           <SisteSakerPanel />
         </section>
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
+        <UXTestComponent />
         <div className={CSS.flereTjenester}>
           <Panel className={CSS.flereTjenester}>
             <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
