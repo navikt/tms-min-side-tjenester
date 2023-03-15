@@ -1,3 +1,6 @@
+import React, { useContext } from "react";
+import { LanguageContext } from "./utils/LanguageProvider";
+import { text } from "./language/text";
 import {
   arbeidsavklaringspengerUrl,
   aktivitetsplanUrl,

@@ -1,5 +1,6 @@
-import React from "react";
-import { useIntl } from "react-intl";
+import React, { useContext } from "react";
+import { LanguageContext } from "../../utils/LanguageProvider";
+import { text } from "../../language/text";
 import { LinkPanel } from "@navikt/ds-react";
 import { utbetalingsoversiktUrl } from "../../api/urls";
 import { Money } from "@navikt/ds-icons";
@@ -7,7 +8,7 @@ import { logAmplitudeEvent } from "../../utils/amplitude";
 import CSS from "./Utbetaling.module.css";
 
 const Utbetaling = ({ size }) => {
-  const translate = useIntl();
+  const language = useContext(LanguageContext);
 
   return (
     <>
@@ -21,9 +22,7 @@ const Utbetaling = ({ size }) => {
           <div className={CSS.ikon}>
             <Money fontSize="1.375rem" />
           </div>
-          <LinkPanel.Title className={CSS.tekst}>
-            {translate.formatMessage({ id: "utbetalinger.lenketekst" })}
-          </LinkPanel.Title>
+          <LinkPanel.Title className={CSS.tekst}>{text.utbetalingerLenketekst[language]}</LinkPanel.Title>
         </div>
       </LinkPanel>
     </>

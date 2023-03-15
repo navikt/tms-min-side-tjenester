@@ -1,5 +1,7 @@
+import React, { useContext } from "react";
 import useSWRImmutable from "swr/immutable";
-import { useIntl } from "react-intl";
+import { LanguageContext } from "../../utils/LanguageProvider";
+import { text } from "../../language/text";
 import { fetcher } from "../../api/api";
 import { LinkPanel, Panel, Heading } from "@navikt/ds-react";
 import { mineSakerUrl, sakerApiUrl } from "../../api/urls";
@@ -11,7 +13,7 @@ import CSS from "./SisteSakerPanel.module.css";
 const SisteSakerPanel = () => {
   const { data: saker } = useSWRImmutable(sakerApiUrl, fetcher);
 
-  const translate = useIntl();
+  const language = useContext(LanguageContext);
 
   const visStortSakspanel = saker?.sakstemaer?.length > 0;
 
@@ -21,14 +23,14 @@ const SisteSakerPanel = () => {
         <Panel className={CSS.panel}>
           <div className={CSS.heading}>
             <Heading spacing level="2" size="medium">
-              {translate.formatMessage({ id: "sisteSakerTittel" })}
+              {text.sisteSakerTittel[language]}
             </Heading>
             <a
               className={CSS.alle_saker}
               href={mineSakerUrl}
               onClick={() => logAmplitudeEvent("Siste saker - Se alle")}
             >
-              {translate.formatMessage({ id: "se.alle" })}
+              {text.seAlle[language]}
             </a>
           </div>
           {saker?.sakstemaer.slice(0, 2).map((sak) => (
@@ -58,9 +60,7 @@ const SisteSakerPanel = () => {
             <div className={CSS.ikon}>
               <FileContent fontSize="1.375rem" />
             </div>
-            <LinkPanel.Title className={CSS.panel_liten_tittel}>
-              {translate.formatMessage({ id: "dine.siste.saker" })}
-            </LinkPanel.Title>
+            <LinkPanel.Title className={CSS.panel_liten_tittel}>{text.sisteSakerTittel[language]}</LinkPanel.Title>
           </div>
         </LinkPanel>
       )}

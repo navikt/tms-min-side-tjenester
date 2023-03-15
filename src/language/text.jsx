@@ -164,4 +164,24 @@ export const text = {
     nn: "Arbeidsavklaringspengar",
     en: "Work assessment allowance",
   },
+  uxTweakTittel: {
+    nb: "Vil du bli med på en enkel test av Min side?",
+    nn: "Vil du bli med på en enkel test av Min side?",
+    en: "Vil du bli med på en enkel test av Min side?",
+  },
+  uxTweakIngress1: {
+    nb: "Vi vil gjerne vite om innholdet vårt er forståelig og organisert på en logisk måte. Derfor har vi satt opp en enkel klikktest.",
+    nn: "Vi vil gjerne vite om innholdet vårt er forståelig og organisert på en logisk måte. Derfor har vi satt opp en enkel klikktest.",
+    en: "Vi vil gjerne vite om innholdet vårt er forståelig og organisert på en logisk måte. Derfor har vi satt opp en enkel klikktest.",
+  },
+  uxTweakIngress2: {
+    nb: "Testen åpnes i en ny fane (i et program som heter UXtweak) og bør ikke ta mer enn 3 minutter. Du er anonym. Svarene du gir vil ikke kunne knyttes til deg, eller påvirke en eventuell sak du har hos NAV.",
+    nn: "Testen åpnes i en ny fane (i et program som heter UXtweak) og bør ikke ta mer enn 3 minutter. Du er anonym. Svarene du gir vil ikke kunne knyttes til deg, eller påvirke en eventuell sak du har hos NAV.",
+    en: "Testen åpnes i en ny fane (i et program som heter UXtweak) og bør ikke ta mer enn 3 minutter. Du er anonym. Svarene du gir vil ikke kunne knyttes til deg, eller påvirke en eventuell sak du har hos NAV.",
+  },
+  uxTweakLenketekst: {
+    nb: "Ja, jeg vil teste",
+    nn: "Ja, jeg vil teste",
+    en: "Ja, jeg vil teste",
+  },
 };
