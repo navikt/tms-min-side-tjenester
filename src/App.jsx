@@ -32,14 +32,12 @@ function App() {
           <SisteSakerPanel />
         </section>
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
-        <div className={CSS.flereTjenester}>
-          <Panel className={CSS.flereTjenester}>
-            <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
-              Flere tjenester
-            </Heading>
-            <Lenkeliste lenker={lenker} />
-          </Panel>
-        </div>
+        <Panel className={CSS.flereTjenester}>
+          <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
+            Flere tjenester
+          </Heading>
+          <Lenkeliste lenker={lenker} />
+        </Panel>
       </section>
     </>
   );
