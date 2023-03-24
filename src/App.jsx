@@ -1,3 +1,6 @@
+import React, { useContext } from "react";
+import { LanguageContext } from "./utils/LanguageProvider";
+import { text } from "./language/text";
 import useSWRImmutable from "swr/immutable";
 import { oppfolgingUrl } from "./api/urls";
 import { fetcher } from "./api/api";
@@ -16,6 +19,7 @@ function App() {
   const { data, isLoading } = useSWRImmutable(oppfolgingUrl, fetcher);
   const lenker = data?.erUnderOppfolging ? oppfolgingsLenker : generelleLenker;
   const brukerUnderOppfolging = data?.erUnderOppfolging;
+  const language = useContext(LanguageContext);
 
   if (isLoading) {
     return <ContentLoader />;
@@ -34,7 +38,7 @@ function App() {
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
         <Panel className={CSS.flereTjenester}>
           <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
-            Flere tjenester
+            {text.flereTjenesterTittel[language]}
           </Heading>
           <Lenkeliste lenker={lenker} />
         </Panel>
