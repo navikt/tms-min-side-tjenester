@@ -7,11 +7,13 @@
 
 .flereTjenester {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   text-align: left;
   margin-bottom: 2rem;
   background-color: #f7f7f7 !important;
   border-radius: 8px !important;
+  padding: 16px 24px !important;
 }
 
 .flere_tjenester_header {

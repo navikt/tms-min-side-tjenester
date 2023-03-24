@@ -4,6 +4,8 @@ import dayjs from "dayjs";
 
 dayjs.locale("nb");
 
+export const formatDateMonth = (date) => dayjs(date).locale("nb").format("D. MMMM YYYY");
+
 const i18n = {
   nb: {
     numberToWord: (tall) => {

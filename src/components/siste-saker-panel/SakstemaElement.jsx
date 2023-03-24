@@ -1,13 +1,14 @@
-import { useIntl } from "react-intl";
+import React, { useContext } from "react";
+import { LanguageContext } from "../../utils/LanguageProvider";
+import { text } from "../../language/text";
 import { logAmplitudeEvent } from "../../utils/amplitude";
+import { formatDateMonth } from "../../language/i18n";
 import { Detail } from "@navikt/ds-react";
 import { Next, FileContent } from "@navikt/ds-icons";
-import i18n from "../../language/i18n";
 import CSS from "./SakstemaElement.module.css";
 
 const SakstemaElement = ({ href, sakstema, sistEndret }) => {
-  const translate = useIntl();
-  const { formatDateMonth } = i18n[translate.locale];
+  const language = useContext(LanguageContext);
 
   return (
     <a className={CSS.element} href={href} onClick={() => logAmplitudeEvent("Siste saker - " + sakstema)}>
@@ -18,7 +19,7 @@ const SakstemaElement = ({ href, sakstema, sistEndret }) => {
         <div>
           <div className={CSS.lenketekst}>{sakstema}</div>
           <Detail spacing className={CSS.dato}>
-            {translate.formatMessage({ id: "siste.saker.lenkedetail" }) + formatDateMonth(sistEndret)}
+            {text.sisteSakerLenkedetail[language] + formatDateMonth(sistEndret)}
           </Detail>
         </div>
       </div>

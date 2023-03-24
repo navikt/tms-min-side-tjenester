@@ -1,31 +1,33 @@
-import React from "react";
-import { useIntl } from "react-intl";
+import React, { useContext } from "react";
+import { LanguageContext } from "../../utils/LanguageProvider";
+import { text } from "../../language/text";
 import { LinkPanel, Panel, Heading } from "@navikt/ds-react";
-import { dialogMedVeilederUrl, innboksUrl, mineSakerUrl } from "../../api/urls";
+import { dialogMedVeilederUrl, innboksUrl } from "../../api/urls";
 import { logAmplitudeEvent } from "../../utils/amplitude";
 import KommunikasjonsElement from "./KommunikasjonsElement";
 import { DialogDots, Email } from "@navikt/ds-icons";
 import CSS from "./KommunikasjonsFlis.module.css";
 
 const KommunikasjonsFlis = ({ size }) => {
-  const translate = useIntl();
+  const language = useContext(LanguageContext);
+
   return (
     <>
       {size === "large" ? (
         <Panel className={CSS.large}>
           <Heading spacing level="2" size="medium">
-            {translate.formatMessage({ id: "kommunikasjonsflis.tittel" })}
+            {text.kommunikasjonsFlisTittel[language]}
           </Heading>
           <KommunikasjonsElement
             href={innboksUrl}
-            tittel="kommunikasjonsflis.lenketekst.innboks"
-            ingress="kommunikasjonsflis.ingress.innboks"
+            tittel={text.kommunikasjonsFlisLenketekstInnboks[language]}
+            ingress={text.kommunikasjonsFlisIngressInnboks[language]}
             ikon={<Email fontSize="1.375rem" />}
           />
           <KommunikasjonsElement
             href={dialogMedVeilederUrl}
-            tittel="kommunikasjonsflis.lenketekst.dialog"
-            ingress="kommunikasjonsflis.ingress.dialog"
+            tittel={text.kommunikasjonsFlisLenketekstDialog[language]}
+            ingress={text.kommunikasjonsFlisIngressDialog[language]}
             ikon={<DialogDots fontSize="1.375rem" />}
           />
         </Panel>
@@ -37,7 +39,7 @@ const KommunikasjonsFlis = ({ size }) => {
                 <Email fontSize="22px" />
               </div>
               <LinkPanel.Title className={CSS.small_tittel}>
-                {translate.formatMessage({ id: "kommunikasjonsflis.lenketekst.innboks" })}
+                {text.kommunikasjonsFlisLenketekstInnboks[language]}
               </LinkPanel.Title>
             </div>
           </LinkPanel>

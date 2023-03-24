@@ -1,11 +1,12 @@
-import React from "react";
-import { useIntl } from "react-intl";
+import React, { useContext } from "react";
+import { LanguageContext } from "../utils/LanguageProvider";
+import { text } from "../language/text";
 import { Link } from "@navikt/ds-react";
 import { logAmplitudeEvent } from "../utils/amplitude";
 import CSS from "./Lenkeliste.module.css";
 
 const Lenkeliste = ({ lenker }) => {
-  const translate = useIntl();
+  const language = useContext(LanguageContext);
 
   return (
     <nav className={CSS.nav}>
@@ -13,7 +14,7 @@ const Lenkeliste = ({ lenker }) => {
         return (
           <div className={CSS.link} key={lenke.url}>
             <Link href={lenke.url} onClick={() => logAmplitudeEvent("Flere tjenester - " + lenke.tittel)}>
-              {translate.formatMessage({ id: lenke.tittel })}
+              {lenke[language]}
             </Link>
           </div>
         );

@@ -1,5 +1,6 @@
 .nav {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   text-align: left;
 }
@@ -10,7 +11,7 @@
 }
 
 .link:not(:first-child):not(:nth-child(2)) {
-  flex-grow:0;
+  flex-grow: 0;
 }
 
 @media (max-width: 648px) {

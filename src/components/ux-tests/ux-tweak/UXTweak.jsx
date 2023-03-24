@@ -1,21 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../../utils/LanguageProvider";
+import { text } from "../../../language/text";
 import { BodyLong, Heading, Link, Panel } from "@navikt/ds-react";
-import { useIntl } from "react-intl";
 import style from "./UXTweak.module.css";
 import { UXTweakUrl } from "../../../api/urls";
 
 const UXTweak = () => {
-  const translate = useIntl();
+  const language = useContext(LanguageContext);
 
   return (
     <Panel className={style.panel}>
       <Heading spacing level="2" size="small" className={style.tittel}>
-        {translate.formatMessage({ id: "uxtweak.tittel" })}
+        {text.uxTweakTittel[language]}
       </Heading>
-      <BodyLong className={style.ingress}>{translate.formatMessage({ id: "uxtweak.ingress-1" })}</BodyLong>
-      <BodyLong className={style.ingress}>{translate.formatMessage({ id: "uxtweak.ingress-2" })}</BodyLong>
+      <BodyLong className={style.ingress}>{text.uxTweakIngress1[language]}</BodyLong>
+      <BodyLong className={style.ingress}>{text.uxTweakIngress2[language]}</BodyLong>
       <Link href={UXTweakUrl} target="_blank">
-        {translate.formatMessage({ id: "uxtweak.lenketekst" })}
+        {text.uxTweakLenketekst[language]}
       </Link>
     </Panel>
   );
