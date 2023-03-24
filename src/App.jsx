@@ -18,7 +18,7 @@ import "@navikt/ds-css";
 function App() {
   const { data, isLoading } = useSWRImmutable(oppfolgingUrl, fetcher);
   const lenker = data?.erUnderOppfolging ? oppfolgingsLenker : generelleLenker;
-  const brukerUnderOppfolging = data?.erUnderOppfolging;
+  const brukerUnderOppfolging = false; //data?.erUnderOppfolging;
   const language = useContext(LanguageContext);
 
   if (isLoading) {
