@@ -36,8 +36,8 @@ function App() {
           </section>
           <SisteSakerPanel />
         </section>
-        <UXTweak />
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
+        <UXTweak />
         <Panel className={CSS.flereTjenester}>
           <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
             {text.flereTjenesterTittel[language]}
