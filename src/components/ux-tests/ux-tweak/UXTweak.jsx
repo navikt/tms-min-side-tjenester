@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "../../utils/LanguageProvider";
 import { text } from "../../../language/text";
 import { BodyLong, Heading, Link, Panel } from "@navikt/ds-react";
 import style from "./UXTweak.module.css";
 import { UXTweakUrl } from "../../../api/urls";
+import { LanguageContext } from "../../../utils/LanguageProvider";
 
 const UXTweak = () => {
   const language = useContext(LanguageContext);

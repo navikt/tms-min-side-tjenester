@@ -13,6 +13,7 @@ import SisteSakerPanel from "./components/siste-saker-panel/SisteSakerPanel";
 import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
 import ContentLoader from "./components/content-loader/ContentLoader";
 import CSS from "./App.module.css";
+import UXTweak from "./components/ux-tests/ux-tweak/UXTweak";
 import "@navikt/ds-css";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <SisteSakerPanel />
         </section>
         {brukerUnderOppfolging ? null : <GenerelleFliser />}
+        <UXTweak />
         <Panel className={CSS.flereTjenester}>
           <Heading spacing level="2" size="medium" className={CSS.flere_tjenester_header}>
             {text.flereTjenesterTittel[language]}
