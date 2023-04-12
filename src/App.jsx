@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { LanguageContext } from "./utils/LanguageProvider";
 import { text } from "./language/text";
 import useSWRImmutable from "swr/immutable";
@@ -13,13 +13,12 @@ import SisteSakerPanel from "./components/siste-saker-panel/SisteSakerPanel";
 import GenerelleFliser from "./components/generelle-fliser/GenerelleFliser";
 import ContentLoader from "./components/content-loader/ContentLoader";
 import CSS from "./App.module.css";
-import UXTweak from "./components/ux-tests/ux-tweak/UXTweak";
 import "@navikt/ds-css";
 
 function App() {
   const { data, isLoading } = useSWRImmutable(oppfolgingUrl, fetcher);
   const lenker = data?.erUnderOppfolging ? oppfolgingsLenker : generelleLenker;
-  const brukerUnderOppfolging = false; //data?.erUnderOppfolging;
+  const brukerUnderOppfolging = data?.erUnderOppfolging;
   const language = useContext(LanguageContext);
 
   if (isLoading) {
